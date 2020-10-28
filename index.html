@@ -137,7 +137,7 @@
                   [' porch', ' pie', ' platform'], 
                   [' drinking fountain', ' dryer', ' dome']];
 
-    shuffle(indices);
+    let shuffled = shuffle(indices);
       
     for (var i = 0; i < 6; i++) {
         
@@ -184,7 +184,8 @@
     });
       
     for (var i = 0; i < 6; i++) {
-        var index = indices[i]
+        var index = shuffled[i]
+                
         experiment_trials.push({
         type: 'html-slider-response',
         stimulus: '<p>I see <b>' + cueword[index] + '</b> in this photo of a scene.</p>' +
