@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My experiment</title>
+      <!-- Imports jsPsych and a stylesheet -->
+      <script src="jspsych-6/jspsych.js"></script>
+      <link href="jspsych-6/css/jspsych.css" rel="stylesheet" type="text/css"></link>
+
+      <!-- Imports the "HTML Keyboard Response" Plugin -->
+      <script src="jspsych-6/plugins/jspsych-html-keyboard-response.js"></script>
+
+      <!-- Imports the "jspsych-html-slider-response" Plugin -->
+      <script src="jspsych-6/plugins/jspsych-html-slider-response.js"></script>
+
+      <!-- Imports the "jspsych-html-button-response" Plugin -->
+      <script src="jspsych-6/plugins/jspsych-html-button-response.js"></script>
+      
+  </head>
+  <body></body>
+  <script>
+
+    var timeline = [];
+
+    var intro = {
+          type: "html-button-response",
+          stimulus: "<h3>Welcome: </h3>" +
+              "<p> This study is part of a research project conducted by Ishita Dasgupta, Harvard University.</p>" +
+              "<p> We want to examine people's intuitions about objects in natural scenes.</p>" +
+              "<p> Please read the instructions carefully and try to perform as well as you can.</p>" +
+              "<p> If you have any questions, please write an email to <a href='mailto:idasgupta@physics.harvard.edu'><font color='blue'>Ishita Dasgupta</font></a></p><br>",
+          choices: ['continue'],
+          prompt: ""
+        };
+
+    timeline.push(intro);
+
+    var description = {
+          type: "html-button-response",
+          stimulus: "<h3>Consent form for participation in this online experiment</h3>" +
+          "<p> Designed by: Ishita Dasgupta<br>" +
+          "Email: <font color='blue'>idasgupta@physics.harvard.edu</font><br>" +
+          "</p>" +
+          "<p>Before you decide whether you want to take part, it is important for you to read the following information carefully.</p>" +
+          "<p>We are investigating how people perceive quantities intuitively. In this study you will perform a simple task in which you will have to judge the probabilities of seeing different objects in a scene.</p>" +
+          "<p>The study will take about <b>10 minutes on average</b>. You will <b>receive $0.80 plus a bonus</b> for your participation.</p>" +
+          "<p>We have done our best to comply with the <b>WeAreDynamo Guidelines</b> for Academic Requesters. </p>" +
+          "<p>If you have any suggestions on how we can improve this or future HITs, please do not hesitate to get in touch.</p>" +
+          "<br>" +
+          "<p>By pressing continue, you agree to the following:</p>" +
+          "<p>I have read the above information.</p>" +
+          "<p>I understand that I am free to withdraw from the study without penalty if I so wish.</p>" +
+          "<p>I understand that my information will be treated as strictly confidential and handled in accordance with the Data Protection Act 1998. </p>" +
+          "<p>I understand that the information I have submitted will be published as a report; confidentiality and anonymity will be maintained.</p>" +
+          "<br>",
+          choices: ['continue'],
+          prompt: ""
+        };
+
+    timeline.push(description);
+
+    var instructions = {
+          type: "html-button-response",
+          stimulus: "<h3>Instructions:</h3>" +
+          "<p><b>Please read the following instructions carefully: </b></p>" +
+          "<br>" +
+          "<p> The following study will ask you to estimate the probabilities regarding different objects in a scene.</p>" +
+          "<p>Imagine you are playing a game with a friend. Your friend is looking at a photo of a natural scene and tells you about one item she/he sees in the photo. Your task is then to estimate the probability that there are other items visible in the photo that start with a given letter.</p>" +
+          "<p> Remember that an object may be present in the scene but not visible in the photo. We are interested in the probablity that the object is visible in the photo.</p>" +
+          "<p>Sometimes there will be examples that start with the given letter, to help you, but sometimes there won't be any examples. In both cases, your task is to judge the probaility that <b> any </b> object starting with the given letter (including the examples if there are any) is visible in the scene.</p>" +
+          "<p>On the first page, you will see the item that your friend has told you she/he sees in the scene and a button that says 'Next'. Once you click 'Next', the question asking you to make a judgement about the probability regarding the same or another item in the scence. You will then have <b>10 seconds </b>to make your judgement by clicking on a slider bar that ranges from 0 to 100, and click 'Submit'. On the slider bar, closer to zero means low probability, closer to 100 means high" + "probability.</p>" +
+          "<br>" +
+          "<p>If you do not answer within 10 seconds, a 'Timeout' box will appear and you will not be able to answer that trial any more. Click 'OK' to go on to the next trial. For every judgement you make on time, you will get an additional bonus of $0.1. As the payment fee for this study is $0.8, you can earn $2 in total; so please try to answer the questions before the timeout.</p>" +
+          "<p>There will be a short example on the next page. This example is not part of the actual experiment.</p>",
+          choices: ['continue'],
+          prompt: ""
+    };
+
+    /* NEED TO REPLACE ABOVE INSTRUCTIONS WITH THIS
+    var trial = {
+    type: 'instructions',
+    pages: [
+        'Welcome to the experiment. Click next to begin.',
+        'This is the second page of instructions.',
+        'This is the final page.'
+    ],
+    show_clickable_nav: true
+    }*/
+
+    timeline.push(instructions);
+
+    var test_stimuli = [
+      { stimulus: "img/blue.png", data: {test_part: 'test'}},
+      { stimulus: "img/orange.png", data: {test_part: 'test'}}
+    ];
+
+    var trial_example = {
+    type: 'html-button-response',
+    stimulus: '<p>This is an example trial</p>' + '<br><p>I see <b>a car</b> in this photo of a scene.</p>',
+    choices: ['continue'],
+    prompt: ""
+    };
+
+    timeline.push(trial_example);
+
+    var trial = {
+      type: 'html-slider-response',
+      stimulus: '<p>This is an example trial</p>' + '<br><p>I see <b>a car</b> in this photo of a scene.</p>' +
+                '<p>What is the probability that I also see: <br>garage<br>grandfather clock<br>grill<br>or any other object starting with G?</p><br>',
+      labels: ['0', '100'],
+      prompt: "",
+      trial_duration: 20000,
+      require_movement: true,
+      button_label: 'Continue'
+    };
+
+    timeline.push(trial);
+
+    var prep_start = {
+          type: "html-keyboard-response",
+          stimulus: "<h3>The experiment will now begin. Please press any key to continue.</h3>"
+          };
+
+    timeline.push(prep_start);
+
+    var experiment_trials = [];
+    var cueword = ['a rug', 'a sink', 'a table', 'a lamp', 'a chair', 'a telephone'];
+    var controlword = ['rug is red', 'sink is white', 'table is brown', 'lamp is silver', 'chair is brown', 'telephone is black'];
+
+    //starting letter
+    var firstlet = ['B','T','C','W','P','D'];
+    var secondlet = ['B or S','T or E','C or R','W or F','P or A','D or L'];
+
+    //pointes for sub-additive condition
+    var subword = [[' book', ' bouquet', ' bed'], 
+                  [' table', ' towel', ' toilet'], 
+                  [' chair', ' computer', ' curtain'],
+                  [' window', ' wardrobe', ' wine rack'],
+                  [' painting', ' plant', ' printer'],
+                  [' display case', ' dresser', ' desk']];
+
+    //pointers for super-additive condition
+    var supword = [[' bird', ' buffalo', ' bicycle'],
+                  [' trumpet', ' toll gate', ' trunk'], 
+                  [' cannon', ' cow', ' canoe'],
+                  [' wheelbarrow', ' water fountain', ' windmill'],
+                  [' porch', ' pie', ' platform'], 
+                  [' drinking fountain', ' dryer', ' dome']];
+
+    for (var i = 0; i < 6; i++) {
+      experiment_trials.push({
+        type: 'html-button-response',
+        stimulus: '<p>I see <b>' + cueword[i] + '</b> in this photo of a scene.</p><br>',
+        choices: ['continue'],
+        prompt: ""
+      });
+
+      if (i % 2 == 1) {
+        experiment_trials.push({
+        type: 'html-slider-response',
+        stimulus: '<p>I see <b>' + cueword[i] + '</b> in this photo of a scene.</p>' +
+                '<p>What is the probability that the ' + controlword[i] + '</p><br>'
+        });
+      } else {
+        experiment_trials.push({
+        type: 'html-slider-response',
+        stimulus: '<p>I see <b>' + cueword[i] + '</b> in this photo of a scene.</p>' +
+                '<p>What is the probability that I also see: <br>'+ supword[i][0] +'<br>'+ supword[i][1] +'<br>'+ supword[i][2] +'<br>or any other object starting with ' + firstlet[i] + '</p><br>'
+        });
+      }
+
+      experiment_trials.push({
+        type: 'html-button-response',
+        stimulus: '<p>I see <b>' + cueword[i] + '</b> in this photo of a scene.</p><br>',
+        choices: ['continue'],
+        prompt: ""
+      });
+
+      experiment_trials.push({
+        type: 'html-slider-response',
+        stimulus: '<p>I see <b>' + cueword[i] + '</b> in this photo of a scene.</p>' +
+                '<p>What is the probability that I also see:<br> any object starting with ' + secondlet[i] + '</p><br>'
+        });
+
+    }
+
+    var block = {
+      trial_duration: 20000,
+      labels: ['0', '100'],
+      require_movement: true,
+      button_label: 'Continue',
+      timeline: experiment_trials
+    };
+
+    timeline.push(block);
+
+    jsPsych.init({
+      timeline: timeline,
+      on_finish: function() {
+        jsPsych.data.displayData();
+      }
+    });
+
+  </script>
+
+</html>
