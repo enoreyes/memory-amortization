@@ -94,10 +94,9 @@
           "</p>" +
           "<p>Before you decide whether you want to take part, it is important for you to read the following information carefully.</p>" +
           "<p>We are investigating how people perceive quantities intuitively. In this study you will perform a simple task in which you will have to judge the probabilities of seeing different objects in a scene.</p>" +
-          "<p>The study will take about <b>10 minutes on average</b>. You will <b>receive $0.80 plus a bonus</b> for your participation.</p>" +
+          "<p>The study will take about <b>10 minutes on average</b>." +
           "<p>We have done our best to comply with the <b>WeAreDynamo Guidelines</b> for Academic Requesters. </p>" +
-          "<p>If you have any suggestions on how we can improve this or future HITs, please do not hesitate to get in touch.</p>" +
-          "<br>" +
+          "<p>If you have any suggestions on how we can improve this or future tasks, please do not hesitate to get in touch.</p>" +
           "<p>By pressing continue, you agree to the following:</p>" +
           "<p>I have read the above information.</p>" +
           "<p>I understand that I am free to withdraw from the study without penalty if I so wish.</p>" +
@@ -106,14 +105,11 @@
           "<br>",
         "<h3>Instructions:</h3>" +
           "<p><b>Please read the following instructions carefully: </b></p>" +
-          "<br>" +
           "<p> The following study will ask you to estimate the probabilities regarding different objects in a scene.</p>" +
-          "<p>Imagine you are playing a game with a friend. Your friend is looking at a photo of a natural scene and tells you about one item she/he sees in the photo. Your task is then to estimate the probability that there are other items visible in the photo that start with a given letter.</p>" +
-          "<p> Remember that an object may be present in the scene but not visible in the photo. We are interested in the probablity that the object is visible in the photo.</p>" +
-          "<p>Sometimes there will be examples that start with the given letter, to help you, but sometimes there won't be any examples. In both cases, your task is to judge the probaility that <b> any </b> object starting with the given letter (including the examples if there are any) is visible in the scene.</p>" +
-          "<p>On the first page, you will see the item that your friend has told you she/he sees in the scene and a button that says 'Next'. Once you click 'Next', the question asking you to make a judgement about the probability regarding the same or another item in the scence. You will then have <b>10 seconds </b>to make your judgement by clicking on a slider bar that ranges from 0 to 100, and click 'Submit'. On the slider bar, closer to zero means low probability, closer to 100 means high" + "probability.</p>" +
-          "<br>" +
-          "<p>If you do not answer within 10 seconds, a 'Timeout' box will appear and you will not be able to answer that trial any more. Click 'OK' to go on to the next trial. For every judgement you make on time, you will get an additional bonus of $0.1. As the payment fee for this study is $0.8, you can earn $2 in total; so please try to answer the questions before the timeout.</p>" +
+          "<p>Imagine you are playing a game with a friend. Your friend is looking at a photo of a natural scene and tells you about one item they see in the photo. Your task is then to estimate the probability that there are other items visible in the photo that start with a given letter.</p>" +
+          "<p>Remember that an object may be present in the scene but not visible in the photo. We are interested in the probablity that the object is visible in the photo.</p>" +
+          "<p>On the first page, you will see the item that your friend has told you they see in the scene for 5 seconds, then you will be shown the question asking you to make a judgement about the probability regarding the same or another item in the scence. You will then have <b>30 seconds </b>to make your judgement by clicking on a slider bar that ranges from 0% to 100%, and click 'Submit'. On the slider bar, closer to zero means low probability, closer to 100% means higher probability.</p>" +
+          "<p>If you do not answer within 30 seconds, a 'Timeout' box will appear and you will not be able to answer that trial any more. Click 'OK' to go on to the next trial. Please try to answer the questions before the timeout.</p>" +
           "<p>There will be a short example on the next page. This example is not part of the actual experiment.</p>"
     ],
     show_clickable_nav: true
@@ -134,8 +130,15 @@
 
     var trial_example_response = {
       type: 'html-slider-response',
+      on_load: function () {
+                var input = document.querySelector('#jspsych-html-slider-response-response')
+                input.addEventListener('input', function() {
+                  document.querySelector('#answer-display').innerText = input.valueAsNumber.toString() + '%'
+                })
+            },
       stimulus: '<p>This is an example trial</p>' + '<br><p>I see <b>a car</b> in this photo of a scene.</p>' +
-                '<p>What is the probability that I also see:<br> any other object starting with G</p><br>',
+                '<p>What is the probability that I also see:<br> any other object starting with G</p><br>' +
+                '<p>Your answer is <span id="answer-display"></span></p>',
       labels: ['0%', '100%'],
       prompt: "",
       trial_duration: 20000,
@@ -199,9 +202,15 @@
                 display = document.querySelector(timerString);
                 console.log(timerString)
                 startTimer(twentyseconds, display, timerString);
+
+                var input = document.querySelector('#jspsych-html-slider-response-response')
+                input.addEventListener('input', function() {
+                  document.querySelector('#answer-display').innerText = input.valueAsNumber.toString() + '%'
+                })
             },
         stimulus: '<div><span id="time' + i + '">00:20</span></div><p>I see <b>' + cueword[i] + '</b> in this photo of a scene.</p>' +
-                '<p>What is the probability that I also see:<br> any object starting with ' + firstlet[i] + '</p><br>'
+                '<p>What is the probability that I also see:<br> any object starting with ' + firstlet[i] + '</p><br>' +
+                '<p>Your answer is <span id="answer-display"></span></p>'
         });
     }
 
