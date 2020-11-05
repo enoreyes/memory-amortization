@@ -293,15 +293,37 @@
     ],
     show_clickable_nav: true
     });
-      
+
     for (var i = 0; i < 6; i++) {
         var index = shuffled[i]
+
+        experiment_trials.push({
+          type: 'html-button-response',
+          stimulus: '<p>I see <b>' + cueword[index] + '</b> in this photo of a scene.</p><br>',
+          trial_duration: 5000,
+          choices: [],
+          response_ends_trial: false,
+          prompt: ""
+        });
                 
         experiment_trials.push({
         type: 'html-slider-response',
-        stimulus: '<p>I see <b>' + cueword[index] + '</b> in this photo of a scene.</p>' +
+        on_load: function () {
+                var timerString = '#time' + timerCounter++;
+                var twentyseconds = 30,
+                display = document.querySelector(timerString);
+                console.log(timerString)
+                startTimer(twentyseconds, display, timerString);
+
+                var input = document.querySelector('#jspsych-html-slider-response-response')
+                input.addEventListener('input', function() {
+                  document.querySelector('#answer-display').innerText = input.valueAsNumber.toString() + '%'
+                })
+            },
+        stimulus: '<div><span id="time' + (i+6) + '">00:20</span></div><p>I see <b>' + cueword[index] + '</b> in this photo of a scene.</p>' +
                 '<p>What is the probability that I also see: <br> any other object '+
-                'starting with ' + secondlet[index]
+                'starting with ' + secondlet[index] + 
+                '<p>Your answer is <span id="answer-display"></span></p>'
         });
     }
 
