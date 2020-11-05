@@ -198,10 +198,10 @@
         type: 'html-slider-response',
         on_load: function () {
                 var timerString = '#time' + timerCounter++;
-                var twentyseconds = 30,
+                var timerLength = 60,
                 display = document.querySelector(timerString);
                 console.log(timerString)
-                startTimer(twentyseconds, display, timerString);
+                startTimer(timerLength, display, timerString);
 
                 var input = document.querySelector('#jspsych-html-slider-response-response')
                 input.addEventListener('input', function() {
@@ -310,10 +310,10 @@
         type: 'html-slider-response',
         on_load: function () {
                 var timerString = '#time' + timerCounter++;
-                var twentyseconds = 30,
+                var timerLength = 60,
                 display = document.querySelector(timerString);
                 console.log(timerString)
-                startTimer(twentyseconds, display, timerString);
+                startTimer(timerLength, display, timerString);
 
                 var input = document.querySelector('#jspsych-html-slider-response-response')
                 input.addEventListener('input', function() {
