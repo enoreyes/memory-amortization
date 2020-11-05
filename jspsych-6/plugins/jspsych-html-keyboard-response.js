@@ -8,7 +8,6 @@
  *
  **/
 
-
 jsPsych.plugins["html-keyboard-response"] = (function() {
 
   var plugin = {};

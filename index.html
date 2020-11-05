@@ -40,6 +40,44 @@
         return a;
     }
 
+    /*
+    *
+    *
+    */ 
+
+    function startTimer(duration, display, timerString) {
+
+            var start = Date.now(),
+                diff,
+                minutes,
+                seconds;
+            function timer() {
+                // get the number of seconds that have elapsed since 
+                // startTimer() was called
+                diff = duration - (((Date.now() - start) / 1000) | 0);
+                // does the same job as parseInt truncates the float
+                minutes = (diff / 60) | 0;
+                seconds = (diff % 60) | 0;
+
+                 minutes = minutes < 10 ? "0" + minutes : minutes;
+                 seconds = seconds < 10 ? "0" + seconds : seconds;
+                 if (display !== null) {
+                     display.innerHTML = minutes + ":" + seconds;
+                 }
+
+                // display.textContent = minutes + ":" + seconds; 
+
+                if (diff <= 0) {
+                    // add one second so that the count down starts at the full duration
+                    // example 05:00 not 04:59
+                    start = Date.now() + 1000;
+             }
+            };
+            // we don't want to wait a full second before the timer starts
+            timer();
+            setInterval(timer, 1000);
+        }
+
     var timeline = [];
 
     var instructions = {
@@ -86,7 +124,9 @@
     var trial_example = {
     type: 'html-button-response',
     stimulus: '<p>This is an example trial</p>' + '<br><p>I see <b>a car</b> in this photo of a scene.</p>',
-    choices: ['continue'],
+    trial_duration: 5000,
+    choices: [],
+    response_ends_trial: false,
     prompt: ""
     };
 
@@ -95,8 +135,8 @@
     var trial_example_response = {
       type: 'html-slider-response',
       stimulus: '<p>This is an example trial</p>' + '<br><p>I see <b>a car</b> in this photo of a scene.</p>' +
-                '<p>What is the probability that I also see: <br>garage<br>grandfather clock<br>grill<br>or any other object starting with G?</p><br>',
-      labels: ['0', '100'],
+                '<p>What is the probability that I also see:<br> any other object starting with G</p><br>',
+      labels: ['0%', '100%'],
       prompt: "",
       trial_duration: 20000,
       require_movement: true,
@@ -138,49 +178,111 @@
                   [' drinking fountain', ' dryer', ' dome']];
 
     let shuffled = shuffle(indices);
+    let timerCounter = 0
       
     for (var i = 0; i < 6; i++) {
         
         experiment_trials.push({
         type: 'html-button-response',
         stimulus: '<p>I see <b>' + cueword[i] + '</b> in this photo of a scene.</p><br>',
-        choices: ['continue'],
+        trial_duration: 5000,
+        choices: [],
+        response_ends_trial: false,
         prompt: ""
         });
 
         experiment_trials.push({
         type: 'html-slider-response',
-        stimulus: '<p>I see <b>' + cueword[i] + '</b> in this photo of a scene.</p>' +
+        on_load: function () {
+                var timerString = '#time' + timerCounter++;
+                var twentyseconds = 30,
+                display = document.querySelector(timerString);
+                console.log(timerString)
+                startTimer(twentyseconds, display, timerString);
+            },
+        stimulus: '<div><span id="time' + i + '">00:20</span></div><p>I see <b>' + cueword[i] + '</b> in this photo of a scene.</p>' +
                 '<p>What is the probability that I also see:<br> any object starting with ' + firstlet[i] + '</p><br>'
         });
     }
 
     experiment_trials.push({
-      type: 'html-keyboard-response',
-      stimulus: '<p>We will display these images for 10 seconds<p><br><img src = "img/1.png" width="100" height="100"><img src = "img/2.png" width="100" height="100"><img src = "img/3.png" width="100" height="100"><img src = "img/4.png" width="100" height="100"><img src = "img/5.png" width="100" height="100">',
-      choices: jsPsych.NO_KEYS,
-      trial_duration: 10000,
+    type: 'instructions',
+    pages: [
+        "<p>You will now take a short break.</p>",
+        "<p>You will be shown a series of images, if you've seen the image in the series, press S. If you have not yet seen the image, press D."
+    ],
+    show_clickable_nav: true
     });
 
     experiment_trials.push({
       type: 'html-keyboard-response',
       stimulus: '<img src = "img/1.png" width="200" height="200">',
       choices: ['S', 'D'],
-      prompt: "<p>Press S if the image that follows was in the set. Press D if the image that follows was not in the set.</p>"
+      prompt: "<p>Press S if you've seen it. Press D if you haven't seen it.</p>"
     });
 
     experiment_trials.push({
       type: 'html-keyboard-response',
       stimulus: '<img src = "img/7.png" width="200" height="200">',
       choices: ['S', 'D'],
-      prompt: "<p>Press S if the image that follows was in the set. Press D if the image that follows was not in the set.</p>"
+      prompt: "<p>Press S if you've seen it. Press D if you haven't seen it.</p>"
     });
 
     experiment_trials.push({
       type: 'html-keyboard-response',
       stimulus: '<img src = "img/4.png" width="200" height="200">',
       choices: ['S', 'D'],
-      prompt: "<p>Press S if the image that follows was in the set. Press D if the image that follows was not in the set.</p>"
+      prompt: "<p>Press S if you've seen it. Press D if you haven't seen it.</p>"
+    });
+
+    experiment_trials.push({
+      type: 'html-keyboard-response',
+      stimulus: '<img src = "img/2.png" width="200" height="200">',
+      choices: ['S', 'D'],
+      prompt: "<p>Press S if you've seen it. Press D if you haven't seen it.</p>"
+    });
+
+    experiment_trials.push({
+      type: 'html-keyboard-response',
+      stimulus: '<img src = "img/3.png" width="200" height="200">',
+      choices: ['S', 'D'],
+      prompt: "<p>Press S if you've seen it. Press D if you haven't seen it.</p>"
+    });
+
+    experiment_trials.push({
+      type: 'html-keyboard-response',
+      stimulus: '<img src = "img/7.png" width="200" height="200">',
+      choices: ['S', 'D'],
+      prompt: "<p>Press S if you've seen it. Press D if you haven't seen it.</p>"
+    });
+
+    experiment_trials.push({
+      type: 'html-keyboard-response',
+      stimulus: '<img src = "img/2.png" width="200" height="200">',
+      choices: ['S', 'D'],
+      prompt: "<p>Press S if you've seen it. Press D if you haven't seen it.</p>"
+    });
+
+    experiment_trials.push({
+      type: 'html-keyboard-response',
+      stimulus: '<img src = "img/5.png" width="200" height="200">',
+      choices: ['S', 'D'],
+      prompt: "<p>Press S if you've seen it. Press D if you haven't seen it.</p>"
+    });
+
+    experiment_trials.push({
+      type: 'html-keyboard-response',
+      stimulus: '<img src = "img/1.png" width="200" height="200">',
+      choices: ['S', 'D'],
+      prompt: "<p>Press S if you've seen it. Press D if you haven't seen it.</p>"
+    });
+
+    experiment_trials.push({
+    type: 'instructions',
+    pages: [
+        "<p>You will now return to the previous experiment.</p>"
+    ],
+    show_clickable_nav: true
     });
       
     for (var i = 0; i < 6; i++) {
@@ -196,7 +298,7 @@
 
     var block = {
       trial_duration: 20000,
-      labels: ['0', '100'],
+      labels: ['0%', '100%'],
       require_movement: true,
       button_label: 'Continue',
       timeline: experiment_trials
