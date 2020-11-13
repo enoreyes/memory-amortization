@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My experiment</title>
+      <!-- Imports jsPsych and a stylesheet -->
+      <script src="jspsych/jspsych.js"></script>
+      <link href="jspsych/css/jspsych.css" rel="stylesheet" type="text/css"></link>
+
+      <!-- Imports the "HTML Keyboard Response" Plugin -->
+      <script src="jspsych/plugins/jspsych-html-keyboard-response.js"></script>
+
+      <!-- Imports the "jspsych-html-slider-response" Plugin -->
+      <script src="jspsych/plugins/jspsych-html-slider-response.js"></script>
+
+      <!-- Imports the "jspsych-html-button-response" Plugin -->
+      <script src="jspsych/plugins/jspsych-html-button-response.js"></script>
+
+      <script src="jspsych/plugins/jspsych-same-different-html.js"></script>
+
+      <script src="jspsych/plugins/jspsych-image-button-response.js"></script>
+    
+    <script src="jspsych/plugins/jspsych-instructions.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      
+  </head>
+  <body></body>
+  <script>
+      
+    /**
+    * Shuffles array in place.
+    * @param {Array} a items An array containing the items.
+    */
+    function shuffle(a) {
+        var j, x, i;
+        for (i = a.length - 1; i > 0; i--) {
+                j = Math.floor(Math.random() * (i + 1));
+                x = a[i];
+                a[i] = a[j];
+                a[j] = x;
+            }
+        return a;
+    }
+
+    /**
+    * Function which operates a timer.
+    * @param {int} duration contains the length in seconds of the timer
+    * @param {HTMLElementObject} display contains the html item containing the display text
+    * @param {string} timerString is a string of the actual display text
+    */ 
+
+    function startTimer(duration, display, timerString) {
+
+            var start = Date.now(),
+                diff,
+                minutes,
+                seconds;
+            function timer() {
+                // get the number of seconds that have elapsed since 
+                // startTimer() was called
+                diff = duration - (((Date.now() - start) / 1000) | 0);
+                // does the same job as parseInt truncates the float
+                minutes = (diff / 60) | 0;
+                seconds = (diff % 60) | 0;
+
+                 minutes = minutes < 10 ? "0" + minutes : minutes;
+                 seconds = seconds < 10 ? "0" + seconds : seconds;
+                 if (display !== null) {
+                     display.innerHTML = minutes + ":" + seconds;
+                 }
+
+                // display.textContent = minutes + ":" + seconds; 
+
+                if (diff <= 0) {
+                    // add one second so that the count down starts at the full duration
+                    // example 05:00 not 04:59
+                    start = Date.now() + 1000;
+             }
+            };
+            // we don't want to wait a full second before the timer starts
+            timer();
+            setInterval(timer, 1000);
+        }
+
+    // generate a random subject ID with 15 characters
+    var subject_id = jsPsych.randomization.randomID(15);
+
+    // pick a random condition for the subject at the start of the experiment
+    var condition_assignment = jsPsych.randomization.sampleWithoutReplacement(['conditionA', 'conditionB'], 1)[0];
+
+    // record the condition assignment in the jsPsych data
+    // this adds a property called 'subject' and a property called 'condition' to every trial
+    jsPsych.data.addProperties({
+      subject: subject_id,
+      condition: condition_assignment
+    });
+
+    var timeline = [];
+
+    var instructions = {
+    type: 'instructions',
+    pages: [
+        "<h3>Welcome: </h3>" +
+              "<p> This study is part of a research project conducted for PSY454 at Princeton University.</p>" +
+              "<p> We want to examine people's intuitions about objects in natural scenes.</p>" +
+              "<p> Please read the instructions carefully and try to perform as well as you can.</p>" +
+              "<p> If you have any questions, please write an email to <a href='mailto:ereyes@princeton.edu'><font color='blue'>Eno Reyes</font></a></p><br>",
+        "<h3>Consent form for participation in this online experiment</h3>" +
+          "<p> Designed by: Ishita Dasgupta, Eno Reyes, and Qiong Zhang <br>" +
+          "Email: <font color='blue'>ereyes@princeton.edu</font><br>" +
+          "</p>" +
+          "<p>Before you decide whether you want to take part, it is important for you to read the following information carefully.</p>" +
+          "<p>We are investigating how people perceive quantities intuitively. In this study you will perform a simple task in which you will have to judge the probabilities of seeing different objects in a scene.</p>" +
+          "<p>The study will take about <b>10 minutes on average</b>." +
+          "<p>We have done our best to comply with the <b>WeAreDynamo Guidelines</b> for Academic Requesters. </p>" +
+          "<p>If you have any suggestions on how we can improve this or future tasks, please do not hesitate to get in touch.</p>" +
+          "<p>By pressing continue, you agree to the following:</p>" +
+          "<p>I have read the above information.</p>" +
+          "<p>I understand that I am free to withdraw from the study without penalty if I so wish.</p>" +
+          "<p>I understand that my information will be treated as strictly confidential and handled in accordance with the Data Protection Act 1998. </p>" +
+          "<p>I understand that the information I have submitted will be published as a report; confidentiality and anonymity will be maintained.</p>" +
+          "<br>",
+        "<h3>Instructions:</h3>" +
+          "<p><b>Please read the following instructions carefully: </b></p>" +
+          "<p> The following study will ask you to estimate the probabilities regarding different objects in a scene.</p>" +
+          "<p>Imagine you are playing a game with a friend. Your friend is looking at a photo of a natural scene and tells you about one item they see in the photo. Your task is then to estimate the probability that there are other items visible in the photo that start with a given letter.</p>" +
+          "<p>Remember that an object may be present in the scene but not visible in the photo. We are interested in the probablity that the object is visible in the photo.</p>" +
+          "<p>On the first page, you will see the item that your friend has told you they see in the scene for 5 seconds, then you will be shown the question asking you to make a judgement about the probability regarding the same or another item in the scence. You will then have <b>30 seconds </b>to make your judgement by clicking on a slider bar that ranges from 0% to 100%, and click 'Submit'. On the slider bar, closer to zero means low probability, closer to 100% means higher probability.</p>" +
+          "<p>If you do not answer within 30 seconds, a 'Timeout' box will appear and you will not be able to answer that trial any more. Click 'OK' to go on to the next trial. Please try to answer the questions before the timeout.</p>" +
+          "<p>There will be a short example on the next page. This example is not part of the actual experiment.</p>"
+    ],
+    show_clickable_nav: true
+    }
+    
+    timeline.push(instructions);
+
+    var trial_example = {
+    type: 'html-button-response',
+    stimulus: '<p>This is an example trial</p>' + '<br><p>I see <b>a car</b> in this photo of a scene.</p>',
+    trial_duration: 5000,
+    choices: [],
+    response_ends_trial: false,
+    prompt: ""
+    };
+
+    timeline.push(trial_example);
+
+    var trial_example_response = {
+      type: 'html-slider-response',
+      on_load: function () {
+                var input = document.querySelector('#jspsych-html-slider-response-response')
+                input.addEventListener('input', function() {
+                  document.querySelector('#answer-display').innerText = input.valueAsNumber.toString() + '%'
+                })
+            },
+      stimulus: '<p>This is an example trial</p>' + '<br><p>I see <b>a car</b> in this photo of a scene.</p>' +
+                '<p>What is the probability that I also see:<br> any other object starting with G</p><br>' +
+                '<p>Your answer is <span id="answer-display"></span></p>',
+      labels: ['0%', '100%'],
+      prompt: "",
+      trial_duration: 20000,
+      require_movement: true,
+      button_label: 'Continue'
+    };
+
+    timeline.push(trial_example_response);
+
+    var prep_start = {
+          type: "html-keyboard-response",
+          stimulus: "<h3>The experiment will now begin. Please press any key to continue.</h3>"
+    };
+
+    timeline.push(prep_start);
+
+    var experiment_trials = [];
+    var cueword = ['a rug', 'a sink', 'a table', 'a lamp', 'a chair', 'a telephone'];
+    var controlword = ['rug is red', 'sink is white', 'table is brown', 'lamp is silver', 'chair is brown', 'telephone is black'];
+
+    //starting letter
+    let indices = [0,1,2,3,4,5];
+    var firstlet = ['B','T','C','W','P','D'];
+    var secondlet = ['B or S','T or E','C or R','W or F','P or A','D or L'];
+
+    //pointes for sub-additive condition
+    var subword = [[' book', ' bouquet', ' bed'], 
+                  [' table', ' towel', ' toilet'], 
+                  [' chair', ' computer', ' curtain'],
+                  [' window', ' wardrobe', ' wine rack'],
+                  [' painting', ' plant', ' printer'],
+                  [' display case', ' dresser', ' desk']];
+
+    //pointers for super-additive condition
+    var supword = [[' bird', ' buffalo', ' bicycle'],
+                  [' trumpet', ' toll gate', ' trunk'], 
+                  [' cannon', ' cow', ' canoe'],
+                  [' wheelbarrow', ' water fountain', ' windmill'],
+                  [' porch', ' pie', ' platform'], 
+                  [' drinking fountain', ' dryer', ' dome']];
+
+    let shuffled = shuffle(indices);
+    let timerCounter = 0
+      
+    for (var i = 0; i < 6; i++) {
+        
+        experiment_trials.push({
+        type: 'html-button-response',
+        stimulus: '<p>I see <b>' + cueword[i] + '</b> in this photo of a scene.</p><br>',
+        trial_duration: 1000, // was 5000
+        choices: [],
+        response_ends_trial: false,
+        prompt: ""
+        });
+
+        experiment_trials.push({
+        type: 'html-slider-response',
+        on_load: function () {
+                var timerString = '#time' + timerCounter++;
+                var timerLength = 60,
+                display = document.querySelector(timerString);
+                console.log(timerString)
+                startTimer(timerLength, display, timerString);
+
+                var input = document.querySelector('#jspsych-html-slider-response-response')
+                input.addEventListener('input', function() {
+                  document.querySelector('#answer-display').innerText = input.valueAsNumber.toString() + '%'
+                })
+            },
+        stimulus: '<div><span id="time' + i + '">00:20</span></div><p>I see <b>' + cueword[i] + '</b> in this photo of a scene.</p>' +
+                '<p>What is the probability that I also see:<br> any object starting with ' + firstlet[i] + '</p><br>' +
+                '<p>Your answer is <span id="answer-display"></span></p>'
+        });
+    }
+
+    experiment_trials.push({
+    type: 'instructions',
+    pages: [
+        "<p>You will now take a short break and return to the task after.</p>",
+        "<p>You will be shown a series of images, if you've seen the image in this experiment already, press S. If you have not yet seen the image, press D."
+    ],
+    show_clickable_nav: true
+    });
+
+    experiment_trials.push({
+      type: 'html-keyboard-response',
+      stimulus: '<img src = "img/1.png" width="200" height="200">',
+      choices: ['S', 'D'],
+      prompt: "<p>Press S if you've seen it. Press D if you haven't seen it.</p>"
+    });
+
+    experiment_trials.push({
+      type: 'html-keyboard-response',
+      stimulus: '<img src = "img/7.png" width="200" height="200">',
+      choices: ['S', 'D'],
+      prompt: "<p>Press S if you've seen it. Press D if you haven't seen it.</p>"
+    });
+
+    experiment_trials.push({
+      type: 'html-keyboard-response',
+      stimulus: '<img src = "img/4.png" width="200" height="200">',
+      choices: ['S', 'D'],
+      prompt: "<p>Press S if you've seen it. Press D if you haven't seen it.</p>"
+    });
+
+    experiment_trials.push({
+      type: 'html-keyboard-response',
+      stimulus: '<img src = "img/2.png" width="200" height="200">',
+      choices: ['S', 'D'],
+      prompt: "<p>Press S if you've seen it. Press D if you haven't seen it.</p>"
+    });
+
+    experiment_trials.push({
+      type: 'html-keyboard-response',
+      stimulus: '<img src = "img/3.png" width="200" height="200">',
+      choices: ['S', 'D'],
+      prompt: "<p>Press S if you've seen it. Press D if you haven't seen it.</p>"
+    });
+
+    experiment_trials.push({
+      type: 'html-keyboard-response',
+      stimulus: '<img src = "img/7.png" width="200" height="200">',
+      choices: ['S', 'D'],
+      prompt: "<p>Press S if you've seen it. Press D if you haven't seen it.</p>"
+    });
+
+    experiment_trials.push({
+      type: 'html-keyboard-response',
+      stimulus: '<img src = "img/2.png" width="200" height="200">',
+      choices: ['S', 'D'],
+      prompt: "<p>Press S if you've seen it. Press D if you haven't seen it.</p>"
+    });
+
+    experiment_trials.push({
+      type: 'html-keyboard-response',
+      stimulus: '<img src = "img/5.png" width="200" height="200">',
+      choices: ['S', 'D'],
+      prompt: "<p>Press S if you've seen it. Press D if you haven't seen it.</p>"
+    });
+
+    experiment_trials.push({
+      type: 'html-keyboard-response',
+      stimulus: '<img src = "img/1.png" width="200" height="200">',
+      choices: ['S', 'D'],
+      prompt: "<p>Press S if you've seen it. Press D if you haven't seen it.</p>"
+    });
+
+    experiment_trials.push({
+    type: 'instructions',
+    pages: [
+        "<p>You will now return to the previous experiment.</p>"
+    ],
+    show_clickable_nav: true
+    });
+
+    for (var i = 0; i < 6; i++) {
+        var index = shuffled[i]
+
+        experiment_trials.push({
+          type: 'html-button-response',
+          stimulus: '<p>I see <b>' + cueword[index] + '</b> in this photo of a scene.</p><br>',
+          trial_duration: 1000, // was 5000
+          choices: [],
+          response_ends_trial: false,
+          prompt: ""
+        });
+                
+        experiment_trials.push({
+        type: 'html-slider-response',
+        on_load: function () {
+                var timerString = '#time' + timerCounter++;
+                var timerLength = 60,
+                display = document.querySelector(timerString);
+                console.log(timerString)
+                startTimer(timerLength, display, timerString);
+
+                var input = document.querySelector('#jspsych-html-slider-response-response')
+                input.addEventListener('input', function() {
+                  document.querySelector('#answer-display').innerText = input.valueAsNumber.toString() + '%'
+                })
+            },
+        stimulus: '<div><span id="time' + (i+6) + '">00:20</span></div><p>I see <b>' + cueword[index] + '</b> in this photo of a scene.</p>' +
+                '<p>What is the probability that I also see: <br> any other object '+
+                'starting with ' + secondlet[index] + 
+                '<p>Your answer is <span id="answer-display"></span></p>'
+        });
+    }
+
+    var block = {
+      trial_duration: 20000,
+      labels: ['0%', '100%'],
+      require_movement: true,
+      button_label: 'Continue',
+      timeline: experiment_trials
+    };
+
+    timeline.push(block);
+
+    jsPsych.init({
+      timeline: timeline,
+      on_finish: function() {
+
+        console.log(jsPsych.data.get().json())
+
+        $.ajax({
+          type: "POST",
+          url: "/experiment-data",
+          data: jsPsych.data.get().json(),
+          contentType: "application/json"
+          })
+        .done(function() {
+          // window.location.href = "finish";
+        })
+        .fail(function() {
+          // alert("A problem occurred while writing to the database. Please contact the researcher ereyes@princeton.edu for more information.")
+          // window.location.href = "/";
+        })
+      }
+    });
+      
+  </script>
+
+</html>

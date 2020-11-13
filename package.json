@@ -1,0 +1,26 @@
+{
+  "name": "memory_amortization",
+  "version": "1.0.0",
+  "description": "A jsPsych server running an experiment testing Human Memory Amortization",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enoreyes/memory-amortization.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/enoreyes/memory-amortization/issues"
+  },
+  "homepage": "https://github.com/enoreyes/memory-amortization#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.14",
+    "nodemon": "^2.0.6"
+  }
+}
