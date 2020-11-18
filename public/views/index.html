@@ -273,7 +273,7 @@
       prompt: "<p>Press S if you've seen it. Press D if you haven't seen it.</p>",
       on_finish: function (data) {
 
-            console.log(correct_response_data)
+            console.log(data.correct_response_data)
 
             if (data.key_press == data.correct_response_data) {
               alert('Correct')
