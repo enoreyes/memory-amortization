@@ -206,9 +206,9 @@
     let shuffled = shuffle(indices);
     let timerCounter = 0
     
-    console.log(jsPsych.data.condition)
+    console.log(condition_assignment)
 
-    if (jsPsych.data.condition == 'conditionA') {
+    if (condition_assignment == 'conditionA') {
       
       for (var i = 0; i < 6; i++) {
         
@@ -269,7 +269,8 @@
                 })
             },
         stimulus: '<div><span id="time' + i + '">00:20</span></div><p>I see <b>' + cueword[i] + '</b> in this photo of a scene.</p>' +
-                '<p>What is the probability that I also see: <br>'+ subword[i][0] +'<br>'+ subword[i][1] +'<br>'+ subword[i][2] +'<br>or any other object starting with ' + firstlet[i] + '</p><br>'
+                '<p>What is the probability that I also see: <br>'+ subword[i][0] +'<br>'+ subword[i][1] +'<br>'+ subword[i][2] +'<br>or any other object starting with ' + firstlet[i] + '</p><br>' +
+                '<p>Your answer is <span id="answer-display"></span></p>'
         });
       }
     }
