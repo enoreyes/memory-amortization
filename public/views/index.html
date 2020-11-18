@@ -251,7 +251,7 @@
 
     for (var i = 1; i < 8; i++) {
 
-      var currImage = getRandomInt(1, 11);
+      var currImage = getRandomInt(1, 10);
       var alreadySeen = false;
       var correct_response = 0;
 
@@ -267,10 +267,15 @@
       type: 'html-keyboard-response',
       stimulus: '<img src = "img/' + currImage.toString() + '.png" width="200" height="200">',
       choices: ['S', 'D'],
+      data: {
+        correct_response_data: correct_response
+      },
       prompt: "<p>Press S if you've seen it. Press D if you haven't seen it.</p>",
       on_finish: function (data) {
 
-            if (data.key_press == correct_response) {
+            console.log(correct_response_data)
+
+            if (data.key_press == data.correct_response_data) {
               alert('Correct')
             } else {
               alert('Incorrect')
