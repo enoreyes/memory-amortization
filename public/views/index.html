@@ -143,7 +143,7 @@
     var trial_example = {
     type: 'html-button-response',
     stimulus: '<p>This is an example trial</p>' + '<br><p>I see <b>a car</b> in this photo of a scene.</p>',
-    trial_duration: 5000,
+    trial_duration: 3500,
     choices: [],
     response_ends_trial: false,
     prompt: ""
@@ -326,67 +326,6 @@
 
     }
 
-    /*
-
-    experiment_trials.push({
-      type: 'html-keyboard-response',
-      stimulus: '<img src = "img/7.png" width="200" height="200">',
-      choices: ['S', 'D'],
-      prompt: "<p>Press S if you've seen it. Press D if you haven't seen it.</p>",
-      
-    });
-
-    experiment_trials.push({
-      type: 'html-keyboard-response',
-      stimulus: '<img src = "img/4.png" width="200" height="200">',
-      choices: ['S', 'D'],
-      prompt: "<p>Press S if you've seen it. Press D if you haven't seen it.</p>"
-    });
-
-    experiment_trials.push({
-      type: 'html-keyboard-response',
-      stimulus: '<img src = "img/2.png" width="200" height="200">',
-      choices: ['S', 'D'],
-      prompt: "<p>Press S if you've seen it. Press D if you haven't seen it.</p>"
-    });
-
-    experiment_trials.push({
-      type: 'html-keyboard-response',
-      stimulus: '<img src = "img/3.png" width="200" height="200">',
-      choices: ['S', 'D'],
-      prompt: "<p>Press S if you've seen it. Press D if you haven't seen it.</p>"
-    });
-
-    experiment_trials.push({
-      type: 'html-keyboard-response',
-      stimulus: '<img src = "img/7.png" width="200" height="200">',
-      choices: ['S', 'D'],
-      prompt: "<p>Press S if you've seen it. Press D if you haven't seen it.</p>"
-    });
-
-    experiment_trials.push({
-      type: 'html-keyboard-response',
-      stimulus: '<img src = "img/2.png" width="200" height="200">',
-      choices: ['S', 'D'],
-      prompt: "<p>Press S if you've seen it. Press D if you haven't seen it.</p>"
-    });
-
-    experiment_trials.push({
-      type: 'html-keyboard-response',
-      stimulus: '<img src = "img/5.png" width="200" height="200">',
-      choices: ['S', 'D'],
-      prompt: "<p>Press S if you've seen it. Press D if you haven't seen it.</p>"
-    });
-
-    experiment_trials.push({
-      type: 'html-keyboard-response',
-      stimulus: '<img src = "img/1.png" width="200" height="200">',
-      choices: ['S', 'D'],
-      prompt: "<p>Press S if you've seen it. Press D if you haven't seen it.</p>"
-    });
-
-    */
-
     experiment_trials.push({
     type: 'instructions',
     pages: [
@@ -397,6 +336,8 @@
 
     for (var i = 0; i < 6; i++) {
         var index = shuffled[i]
+
+        console.log(index)
 
         experiment_trials.push({
           type: 'html-button-response',
