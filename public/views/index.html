@@ -205,13 +205,17 @@
 
     let shuffled = shuffle(indices);
     let timerCounter = 0
+    
+    console.log(jsPsych.data.condition)
+
+    if (jsPsych.data.condition == 'conditionA') {
       
-    for (var i = 0; i < 6; i++) {
+      for (var i = 0; i < 6; i++) {
         
         experiment_trials.push({
         type: 'html-button-response',
         stimulus: '<p>I see <b>' + cueword[i] + '</b> in this photo of a scene.</p><br>',
-        trial_duration: 1000, // was 5000
+        trial_duration: 3500, // was 5000
         choices: [],
         response_ends_trial: false,
         prompt: ""
@@ -235,7 +239,42 @@
                 '<p>What is the probability that I also see:<br> any object starting with ' + firstlet[i] + '</p><br>' +
                 '<p>Your answer is <span id="answer-display"></span></p>'
         });
+      }
+
+    } else {
+
+      for (var i = 0; i < 6; i++) {
+        
+        experiment_trials.push({
+        type: 'html-button-response',
+        stimulus: '<p>I see <b>' + cueword[i] + '</b> in this photo of a scene.</p><br>',
+        trial_duration: 3500, // was 5000
+        choices: [],
+        response_ends_trial: false,
+        prompt: ""
+        });
+
+        experiment_trials.push({
+        type: 'html-slider-response',
+        on_load: function () {
+                var timerString = '#time' + timerCounter++;
+                var timerLength = 60,
+                display = document.querySelector(timerString);
+                console.log(timerString)
+                startTimer(timerLength, display, timerString);
+
+                var input = document.querySelector('#jspsych-html-slider-response-response')
+                input.addEventListener('input', function() {
+                  document.querySelector('#answer-display').innerText = input.valueAsNumber.toString() + '%'
+                })
+            },
+        stimulus: '<div><span id="time' + i + '">00:20</span></div><p>I see <b>' + cueword[i] + '</b> in this photo of a scene.</p>' +
+                '<p>What is the probability that I also see: <br>'+ subword[i][0] +'<br>'+ subword[i][1] +'<br>'+ subword[i][2] +'<br>or any other object starting with ' + firstlet[i] + '</p><br>'
+        });
+      }
     }
+
+
 
     experiment_trials.push({
     type: 'instructions',
@@ -276,7 +315,7 @@
             console.log(data.correct_response_data)
 
             if (data.key_press == data.correct_response_data) {
-              alert('Correct')
+              // do nothing
             } else {
               alert('Incorrect')
             }
