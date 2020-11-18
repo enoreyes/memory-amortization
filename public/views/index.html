@@ -251,7 +251,6 @@
     for (var i = 1; i < 8; i++) {
 
       var currImage = getRandomInt(1, 11);
-      console.log(currImage.toString())
       var alreadySeen = false;
 
       if ((currImage in imagesShown)) {
@@ -259,10 +258,14 @@
       } else {
           imagesShown[currImage] = true;
       }
+
+      console.log(currImage)
+      console.log(imagesShown)
+      console.log(currImage in imagesShown)
       
       experiment_trials.push({
       type: 'html-keyboard-response',
-      stimulus: '<img src = "img/ ' + currImage.toString() + '.png" width="200" height="200">',
+      stimulus: '<img src = "img/' + currImage.toString() + '.png" width="200" height="200">',
       choices: ['S', 'D'],
       prompt: "<p>Press S if you've seen it. Press D if you haven't seen it.</p>",
       on_finish: function (data) {
