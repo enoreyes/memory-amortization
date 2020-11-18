@@ -256,7 +256,7 @@
       if ((currImage in imagesShown)) {
           alreadySeen = true;
       } else {
-          imagesShown.push(currImage);
+          imagesShown[currImage] = true;
       }
       
       experiment_trials.push({
