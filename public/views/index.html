@@ -42,6 +42,12 @@
         return a;
     }
 
+    function getRandomInt(min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
     /**
     * Function which operates a timer.
     * @param {int} duration contains the length in seconds of the timer
@@ -240,9 +246,22 @@
     show_clickable_nav: true
     });
 
-    experiment_trials.push({
+    var imagesShown = {}
+
+    for (var i = 1; i < 6; i++) {
+
+      var currImage = getRandomInt(1, 11);
+      var alreadySeen = false;
+
+      if ((currImage in imagesShown)) {
+          alreadySeen = true;
+      } else {
+          imagesShown.push(currImage);
+      }
+      
+      experiment_trials.push({
       type: 'html-keyboard-response',
-      stimulus: '<img src = "img/1.png" width="200" height="200">',
+      stimulus: '<img src = "img/ ' + currImage + '.png" width="200" height="200">',
       choices: ['S', 'D'],
       prompt: "<p>Press S if you've seen it. Press D if you haven't seen it.</p>",
       on_finish: function (data) {
@@ -250,24 +269,38 @@
             var correct = false;
             // key code for D
             if (data.key_press == 68) {
+
+              if (alreadySeen == true) {
+                correct = false;
+              } else {
                 correct = true;
+              }
+
             // key code for S
             } else if (data.key_press == 83) {
+              if (alreadySeen == true) {
+                correct = true;
+              } else {
                 correct = false;
+              }
             }
 
             if(correct == true){
-                alert('correct')
+                alert('Correct')
             }
             else{
-                alert('incorrect')
+                alert('Incorrect')
             }
 
             jsPsych.data.addDataToLastTrial({
                 correct: correct
             });
         }
-    });
+      });
+
+    }
+
+    /*
 
     experiment_trials.push({
       type: 'html-keyboard-response',
@@ -325,6 +358,8 @@
       choices: ['S', 'D'],
       prompt: "<p>Press S if you've seen it. Press D if you haven't seen it.</p>"
     });
+
+    */
 
     experiment_trials.push({
     type: 'instructions',
