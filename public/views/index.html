@@ -320,7 +320,12 @@
         type: 'html-button-response',
         stimulus: function(){
           
-          if (jsPsych.data.getLastTrialData().values()[0].key_press == correct_response) {
+          var dataCollection = jsPsych.data.getLastTrialData().values()[0]
+
+          console.log(dataCollection.correct_response_data);
+          console.log(dataCollection.key_press);
+
+          if (dataCollection.correct_response_data == dataCollection.key_press) {
             return '<p> Correct </p>';
           } else {
             return '<p> Incorrect </p>';
