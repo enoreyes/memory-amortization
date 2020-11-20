@@ -304,24 +304,32 @@
       }
       
       experiment_trials.push({
-      type: 'html-keyboard-response',
-      stimulus: '<img src = "img/' + currImage.toString() + '.png" width="200" height="200">',
-      choices: ['S', 'D'],
-      data: {
-        correct_response_data: correct_response
-      },
-      prompt: "<p>Press S if you've seen it. Press D if you haven't seen it.</p>",
-      on_finish: function (data) {
+        type: 'html-keyboard-response',
+        stimulus: '<img src = "img/' + currImage.toString() + '.png" width="200" height="200">',
+        choices: ['S', 'D'],
+        data: {
+          correct_response_data: correct_response
+        },
+        prompt: "<p>Press S if you've seen it. Press D if you haven't seen it.</p>",
+        on_finish: function (data) {
 
-            console.log(data.correct_response_data)
+          }
+      });
 
-            if (data.key_press == data.correct_response_data) {
-              // do nothing
-            } else {
-              alert('Incorrect')
-            }
-
-        }
+      experiment_trials.push({
+        type: 'html-button-response',
+        stimulus: function(){
+          
+          if (jsPsych.data.getLastTrialData().values()[0].key_press == correct_response) {
+            return '<p> Correct </p>';
+          } else {
+            return '<p> Incorrect </p>';
+          }
+        },
+        trial_duration: 2000,
+        choices: [],
+        response_ends_trial: true,
+        prompt: ""
       });
 
     }
@@ -342,7 +350,7 @@
         experiment_trials.push({
           type: 'html-button-response',
           stimulus: '<p>I see <b>' + cueword[index] + '</b> in this photo of a scene.</p><br>',
-          trial_duration: 1000, // was 5000
+          trial_duration: 3500, // was 5000
           choices: [],
           response_ends_trial: false,
           prompt: ""
