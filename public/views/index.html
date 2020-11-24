@@ -121,6 +121,9 @@
 
     var instructions = {
     type: 'instructions',
+    data: {
+      order: shuffled
+    },
     pages: [
         "<h3>Welcome: </h3>" +
               "<p> This study is part of a research project conducted for PSY454 at Princeton University.</p>" +
@@ -240,6 +243,10 @@
         experiment_trials.push({
         type: 'html-slider-response',
         trial_duration: 60000,
+        data: {
+          cueword: cueword[i],
+          firstlet: firstlet[i]
+        },
         on_load: function () {
                 var timerString = '#time' + timerCounter++;
                 var timerLength = 60,
@@ -274,6 +281,11 @@
         experiment_trials.push({
         type: 'html-slider-response',
         trial_duration: 60000,
+        data: {
+          cueword: cueword[i],
+          subword: subword[i][0],
+          firstlet: firstlet[i]
+        },
         on_load: function () {
                 var timerString = '#time' + timerCounter++;
                 var timerLength = 60,
@@ -382,6 +394,10 @@
         experiment_trials.push({
         type: 'html-slider-response',
         trial_duration: 60000,
+        data: {
+          cueword: cueword[index],
+          secondlet: secondlet[index]
+        },
         on_load: function () {
                 var timerString = '#time' + timerCounter++;
                 var timerLength = 60,
