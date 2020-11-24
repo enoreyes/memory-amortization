@@ -109,6 +109,7 @@
 
     // pick a random condition for the subject at the start of the experiment
     var condition_assignment = jsPsych.randomization.sampleWithoutReplacement(['conditionA', 'conditionB'], 1)[0];
+    let indices = [0,1,2,3,4,5];
     let shuffled = shuffle(indices);
 
     // record the condition assignment in the jsPsych data
@@ -203,7 +204,6 @@
     var controlword = ['rug is red', 'sink is white', 'table is brown', 'lamp is silver', 'chair is brown', 'telephone is black'];
 
     //starting letter
-    let indices = [0,1,2,3,4,5];
     var firstlet = ['B','T','C','W','P','D'];
     var secondlet = ['B or S','T or E','C or R','W or F','P or A','D or L'];
 
