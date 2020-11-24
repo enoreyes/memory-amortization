@@ -85,9 +85,6 @@
                 minutes = (diff / 60) | 0;
                 seconds = (diff % 60) | 0;
 
-                console.log(minutes)
-                console.log(seconds)
-
                  minutes = minutes < 10 ? "0" + minutes : minutes;
                  seconds = seconds < 10 ? "0" + seconds : seconds;
                  if (display !== null) {
@@ -242,6 +239,7 @@
 
         experiment_trials.push({
         type: 'html-slider-response',
+        trial_duration: 60000,
         on_load: function () {
                 var timerString = '#time' + timerCounter++;
                 var timerLength = 60,
@@ -275,6 +273,7 @@
 
         experiment_trials.push({
         type: 'html-slider-response',
+        trial_duration: 60000,
         on_load: function () {
                 var timerString = '#time' + timerCounter++;
                 var timerLength = 60,
@@ -382,6 +381,7 @@
                 
         experiment_trials.push({
         type: 'html-slider-response',
+        trial_duration: 60000,
         on_load: function () {
                 var timerString = '#time' + timerCounter++;
                 var timerLength = 60,
