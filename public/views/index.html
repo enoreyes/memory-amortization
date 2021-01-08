@@ -197,15 +197,15 @@
     var firstlet = ['B','T','C','W','P','D'];
     var secondlet = ['B or S','T or E','C or R','W or F','P or A','D or L'];
 
-    shuffle_multiple(firstlet, secondlet, subword, cueword, controlword)
-
     //pointes for sub-additive condition
-    var subword = [' book<br>bouquet<br>bed', 
-                  ' table<br>towel<br>toilet',
-                  ' chair<br>computer<br>curtain',
-                  ' window<br>wardrobe<br>wine rack',
-                  ' painting<br>plant<br>printer',
-                  ' display case<br>dresser<br>desk'];
+    var subword = ['book<br>bouquet<br>bed', 
+                  'table<br>towel<br>toilet',
+                  'chair<br>computer<br>curtain',
+                  'window<br>wardrobe<br>wine rack',
+                  'painting<br>plant<br>printer',
+                  'display case<br>dresser<br>desk'];
+
+    shuffle_multiple(firstlet, secondlet, subword, cueword, controlword)
 
     // record the condition assignment, subjectid, first and secondlet order, and prolificID in the jsPsych data
     jsPsych.data.addProperties({
