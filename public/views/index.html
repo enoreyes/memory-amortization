@@ -100,6 +100,7 @@
 
       for (var index = 0; index < argsLength; index += 1) {
         if (!isArray(arguments[index])) {
+          print(index)
           throw new TypeError("Argument is not an array.");
         }
 
