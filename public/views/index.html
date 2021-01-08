@@ -196,23 +196,15 @@
     var firstlet = ['B','T','C','W','P','D'];
     var secondlet = ['B or S','T or E','C or R','W or F','P or A','D or L'];
 
-    shuffle_multiple(firstlet, secondlet, subword, supword, cueword, controlword)
+    shuffle_multiple(firstlet, secondlet, subword, cueword, controlword)
 
     //pointes for sub-additive condition
-    var subword = [[' book', ' bouquet', ' bed'], 
-                  [' table', ' towel', ' toilet'], 
-                  [' chair', ' computer', ' curtain'],
-                  [' window', ' wardrobe', ' wine rack'],
-                  [' painting', ' plant', ' printer'],
-                  [' display case', ' dresser', ' desk']];
-
-    //pointers for super-additive condition
-    var supword = [[' bird', ' buffalo', ' bicycle'],
-                  [' trumpet', ' toll gate', ' trunk'], 
-                  [' cannon', ' cow', ' canoe'],
-                  [' wheelbarrow', ' water fountain', ' windmill'],
-                  [' porch', ' pie', ' platform'], 
-                  [' drinking fountain', ' dryer', ' dome']];
+    var subword = [' book<br>bouquet<br>bed', 
+                  ' table<br>towel<br>toilet',
+                  ' chair<br>computer<br>curtain',
+                  ' window<br>wardrobe<br>wine rack',
+                  ' painting<br>plant<br>printer',
+                  ' display case<br>dresser<br>desk'];
 
     // record the condition assignment, subjectid, first and secondlet order, and prolificID in the jsPsych data
     jsPsych.data.addProperties({
@@ -223,7 +215,6 @@
       cueword: cueword,
       controlword: controlword,
       subword: subword,
-      supword: supword
     });
 
     var timeline = [];
@@ -382,7 +373,7 @@
         trial_duration: 60000,
         data: {
           cueword: cueword[i],
-          subword: subword[i][0],
+          subword: subword[i],
           firstlet: firstlet[i]
         },
         on_load: function () {
@@ -398,7 +389,7 @@
                 })
             },
         stimulus: '<div><span id="time' + i + '">00:59</span></div><p>I see <b>' + cueword[i] + '</b> in this photo of a scene.</p>' +
-                '<p>What is the probability that I also see: <br>'+ subword[i][0] +'<br>'+ subword[i][1] +'<br>'+ subword[i][2] +'<br>or any other object starting with ' + firstlet[i] + '</p><br>' +
+                '<p>What is the probability that I also see: <br>'+ subword[i] +'<br>or any other object starting with ' + firstlet[i] + '</p><br>' +
                 '<p>Your answer is <span id="answer-display"></span></p>'
         });
       }
