@@ -32,6 +32,10 @@ app.get('/', function(request, response) {
     response.render('index.html');
 });
 
+app.get('/informed_consent', function(request, response) {
+    response.render('informed_consent.html');
+});
+
 app.get('/finish', function(request, response) {
     response.render('finish.html');
 });
