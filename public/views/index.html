@@ -516,6 +516,15 @@
 
     timeline.push(block);
 
+    var final_questions = {
+      type: 'survey-text',
+      questions: [
+        {prompt: "This is the end of the experiment, thank you for participating, please provide any feedback you have below. After submitting feedback, press submit to get your completion code.", placeholder: "Feedback"}
+      ],
+    };
+
+    timeline.push(final_questions)
+
     jsPsych.init({
       timeline: timeline,
       on_finish: function() {
