@@ -89,19 +89,37 @@
       return array;
     }
 
-    function double_shuffle(obj1, obj2) {
-      var index = obj1.length;
-      var rnd, tmp1, tmp2;
+    var isArray = Array.isArray || function(value) {
+      return {}.toString.call(value) !== "[object Array]"
+    };
 
-      while (index) {
-        rnd = Math.floor(Math.random() * index);
-        index -= 1;
-        tmp1 = obj1[index];
-        tmp2 = obj2[index];
-        obj1[index] = obj1[rnd];
-        obj2[index] = obj2[rnd];
-        obj1[rnd] = tmp1;
-        obj2[rnd] = tmp2;
+    function shuffle_multiple() {
+      var arrLength = 0;
+      var argsLength = arguments.length;
+      var rnd, tmp;
+
+      for (var index = 0; index < argsLength; index += 1) {
+        if (!isArray(arguments[index])) {
+          throw new TypeError("Argument is not an array.");
+        }
+
+        if (index === 0) {
+          arrLength = arguments[0].length;
+        }
+
+        if (arrLength !== arguments[index].length) {
+          throw new RangeError("Array lengths do not match.");
+        }
+      }
+
+      while (arrLength) {
+        rnd = Math.floor(Math.random() * arrLength);
+        arrLength -= 1;
+        for (argsIndex = 0; argsIndex < argsLength; argsIndex += 1) {
+          tmp = arguments[argsIndex][arrLength];
+          arguments[argsIndex][arrLength] = arguments[argsIndex][rnd];
+          arguments[argsIndex][rnd] = tmp;
+        }
       }
     }
 
@@ -178,7 +196,7 @@
     var firstlet = ['B','T','C','W','P','D'];
     var secondlet = ['B or S','T or E','C or R','W or F','P or A','D or L'];
 
-    double_shuffle(firstlet, secondlet)
+    shuffle_multiple(firstlet, secondlet, subword, supword, cueword, controlword)
 
     //pointes for sub-additive condition
     var subword = [[' book', ' bouquet', ' bed'], 
@@ -201,7 +219,11 @@
       subject: subject_id,
       condition: condition_assignment,
       firstlet: firstlet,
-      secondlet: secondlet
+      secondlet: secondlet,
+      cueword: cueword,
+      controlword: controlword,
+      subword: subword,
+      supword: supword
     });
 
     var timeline = [];
