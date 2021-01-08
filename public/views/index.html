@@ -19,7 +19,7 @@
 
       <script src="jspsych/plugins/jspsych-image-button-response.js"></script>
 
-      <script src="jspsych/plugins/survey-text.js"></script>
+      <script src="jspsych/plugins/jspsych-survey-text.js"></script>
     
     <script src="jspsych/plugins/jspsych-instructions.js"></script>
 
@@ -213,8 +213,8 @@
     };
     timeline.push(survey_trial);
 
-    var instructions = {
-    type: 'instructions_one',
+    var instructions_one = {
+    type: 'instructions',
     data: {
       order: shuffled
     },
@@ -223,7 +223,8 @@
               "<p> This study is part of a research project conducted for PSY454 at Princeton University.</p>" +
               "<p> We want to examine people's intuitions about objects in natural scenes.</p>" +
               "<p> Please read the instructions carefully and try to perform as well as you can.</p>" +
-              "<p> If you have any questions, please write an email to <a href='mailto:ereyes@princeton.edu'><font color='blue'>Eno Reyes</font></a></p><br>"
+              "<p> If you have any questions, please write an email to <a href='mailto:ereyes@princeton.edu'><font color='blue'>Eno Reyes</font></a></p><br>",
+
     ],
     show_clickable_nav: true
     }
