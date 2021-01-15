@@ -520,6 +520,18 @@
 
     timeline.push(final_questions)
 
+
+    shuffle_multiple(firstlet, secondlet, subword, cueword, controlword)
+
+    // record the condition assignment, subjectid, first and secondlet order, and prolificID in the jsPsych data
+    jsPsych.data.addProperties({
+      firstlet_origin: firstlet,
+      secondlet_origin: secondlet,
+      subword_origin: subword,
+      cueword_origin: cueword,
+      controlword_origin: controlword
+    });
+
     jsPsych.init({
       timeline: timeline,
       on_finish: function() {
