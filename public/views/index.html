@@ -259,8 +259,8 @@
           "<p> The following study will ask you to estimate the probabilities regarding different objects in a scene.</p>" +
           "<p>Imagine you are playing a game with a friend. Your friend is looking at a photo of a natural scene and tells you about one item they see in the photo. Your task is then to estimate the probability that there are other items visible in the photo that start with a given letter.</p>" +
           "<p>Remember that an object may be present in the scene but not visible in the photo. We are interested in the probablity that the object is visible in the photo.</p>" +
-          "<p>On the first page, you will see the item that your friend has told you they see in the scene for 5 seconds, please use this time to consider what scenes you are likely to see this item in. You will then be shown the question asking you to make a judgement about the probability probability of other objects in the scene. You will then have <b>30 seconds </b>to make your judgement by clicking on a slider bar that ranges from 0% to 100%, and click 'Submit'. On the slider bar, closer to zero means low probability, closer to 100% means higher probability.</p>" +
-          "<p>If you do not answer within 30 seconds, a 'Timeout' box will appear and you will not be able to answer that trial any more. Click 'OK' to go on to the next trial. Please try to answer the questions before the timeout.</p>" +
+          "<p>On the first page, you will see the item that your friend has told you they see in the scene for 5 seconds, please use this time to consider what scenes you are likely to see this item in. You will then be shown the question asking you to make a judgement about the probability probability of other objects in the scene. You will then have <b>20 seconds </b>to make your judgement by clicking on a slider bar that ranges from 0% to 100%, and click 'Submit'. On the slider bar, closer to zero means low probability, closer to 100% means higher probability.</p>" +
+          "<p>If you do not answer within 20 seconds, a 'Timeout' box will appear and you will not be able to answer that trial any more. Click 'OK' to go on to the next trial. Please try to answer the questions before the timeout.</p>" +
           "<p>There will be a short example on the next page. This example is not part of the actual experiment.</p>"
     ],
     show_clickable_nav: true
@@ -328,7 +328,7 @@
 
         experiment_trials.push({
         type: 'html-slider-response',
-        trial_duration: 30000,
+        trial_duration: 20000,
         slider_start: 1,
         data: {
           cueword: cueword[i],
@@ -336,7 +336,7 @@
         },
         on_load: function () {
                 var timerString = '#time' + timerCounter++;
-                var timerLength = 30,
+                var timerLength = 20,
                 display = document.querySelector(timerString);
                 console.log(timerString)
                 startTimer(timerLength, display, timerString);
@@ -346,7 +346,7 @@
                   document.querySelector('#answer-display').innerText = input.valueAsNumber.toString() + '%'
                 })
             },
-        stimulus: '<div><span id="time' + i + '">00:29</span></div><p>I see <b>' + cueword[i] + '</b> in this photo of a scene.</p>' +
+        stimulus: '<div><span id="time' + i + '">00:19</span></div><p>I see <b>' + cueword[i] + '</b> in this photo of a scene.</p>' +
                 '<p>What is the probability that I also see:<br> any object starting with ' + firstlet[i] + '</p><br>' +
                 '<p>Your answer is <span id="answer-display"></span></p>'
         });
@@ -365,7 +365,7 @@
 
         experiment_trials.push({
         type: 'html-slider-response',
-        trial_duration: 30000,
+        trial_duration: 20000,
         slider_start: 1,
         data: {
           cueword: cueword[i],
@@ -373,7 +373,7 @@
         },
         on_load: function () {
                 var timerString = '#time' + timerCounter++;
-                var timerLength = 30,
+                var timerLength = 20,
                 display = document.querySelector(timerString);
                 console.log(timerString)
                 startTimer(timerLength, display, timerString);
@@ -383,7 +383,7 @@
                   document.querySelector('#answer-display').innerText = input.valueAsNumber.toString() + '%'
                 })
             },
-        stimulus: '<div><span id="time' + i + '">00:29</span></div><p>I see <b>' + cueword[i] + '</b> in this photo of a scene.</p>' +
+        stimulus: '<div><span id="time' + i + '">00:19</span></div><p>I see <b>' + cueword[i] + '</b> in this photo of a scene.</p>' +
                 '<p>What is the probability that I also see:<br> any object starting with ' + firstlet[i] + '</p><br>' +
                 '<p>Your answer is <span id="answer-display"></span></p>'
         });
@@ -404,7 +404,7 @@
 
         experiment_trials.push({
         type: 'html-slider-response',
-        trial_duration: 30000,
+        trial_duration: 20000,
         slider_start: 1,
         data: {
           cueword: cueword[i],
@@ -413,7 +413,7 @@
         },
         on_load: function () {
                 var timerString = '#time' + timerCounter++;
-                var timerLength = 30,
+                var timerLength = 20,
                 display = document.querySelector(timerString);
                 console.log(timerString)
                 startTimer(timerLength, display, timerString);
@@ -423,7 +423,7 @@
                   document.querySelector('#answer-display').innerText = input.valueAsNumber.toString() + '%'
                 })
             },
-        stimulus: '<div><span id="time' + i + '">00:29</span></div><p>I see <b>' + cueword[i] + '</b> in this photo of a scene.</p>' +
+        stimulus: '<div><span id="time' + i + '">00:19</span></div><p>I see <b>' + cueword[i] + '</b> in this photo of a scene.</p>' +
                 '<p>What is the probability that I also see: <br>'+ subword[i] +'<br>or any other object starting with ' + firstlet[i] + '</p><br>' +
                 '<p>Your answer is <span id="answer-display"></span></p>'
         });
@@ -442,7 +442,7 @@
 
         experiment_trials.push({
         type: 'html-slider-response',
-        trial_duration: 30000,
+        trial_duration: 20000,
         slider_start: 1,
         data: {
           cueword: cueword[i],
@@ -451,7 +451,7 @@
         },
         on_load: function () {
                 var timerString = '#time' + timerCounter++;
-                var timerLength = 30,
+                var timerLength = 20,
                 display = document.querySelector(timerString);
                 console.log(timerString)
                 startTimer(timerLength, display, timerString);
@@ -461,7 +461,7 @@
                   document.querySelector('#answer-display').innerText = input.valueAsNumber.toString() + '%'
                 })
             },
-        stimulus: '<div><span id="time' + i + '">00:29</span></div><p>I see <b>' + cueword[i] + '</b> in this photo of a scene.</p>' +
+        stimulus: '<div><span id="time' + i + '">00:19</span></div><p>I see <b>' + cueword[i] + '</b> in this photo of a scene.</p>' +
                 '<p>What is the probability that I also see: <br>'+ subword[i] +'<br>or any other object starting with ' + firstlet[i] + '</p><br>' +
                 '<p>Your answer is <span id="answer-display"></span></p>'
         });
@@ -554,7 +554,7 @@
                 
         experiment_trials.push({
         type: 'html-slider-response',
-        trial_duration: 30000,
+        trial_duration: 20000,
         slider_start: 1,
         data: {
           cueword: cueword[index],
@@ -562,7 +562,7 @@
         },
         on_load: function () {
                 var timerString = '#time' + timerCounter++;
-                var timerLength = 30,
+                var timerLength = 20,
                 display = document.querySelector(timerString);
                 console.log(timerString)
                 startTimer(timerLength, display, timerString);
@@ -572,7 +572,7 @@
                   document.querySelector('#answer-display').innerText = input.valueAsNumber.toString() + '%'
                 })
             },
-        stimulus: '<div><span id="time' + (i+6) + '">00:29</span></div><p>I see <b>' + cueword[index] + '</b> in this photo of a scene.</p>' +
+        stimulus: '<div><span id="time' + (i+6) + '">00:19</span></div><p>I see <b>' + cueword[index] + '</b> in this photo of a scene.</p>' +
                 '<p>What is the probability that I also see: <br> any other object '+
                 'starting with ' + secondlet[index] + 
                 '<p>Your answer is <span id="answer-display"></span></p>'
