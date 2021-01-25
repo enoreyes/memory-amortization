@@ -281,7 +281,7 @@
 
     var trial_example_response = {
       type: 'html-slider-response',
-      slider_start:0,
+      slider_start: 0,
       on_load: function () {
                 var input = document.querySelector('#jspsych-html-slider-response-response')
                 input.addEventListener('input', function() {
@@ -329,6 +329,7 @@
         experiment_trials.push({
         type: 'html-slider-response',
         trial_duration: 30000,
+        slider_start: 0,
         data: {
           cueword: cueword[i],
           firstlet: firstlet[i]
