@@ -38,7 +38,7 @@ jsPsych.plugins['html-slider-response'] = (function() {
       start: {
         type: jsPsych.plugins.parameterType.INT,
         pretty_name: 'Slider starting value',
-        default: 50,
+        default: 0,
         description: 'Sets the starting value of the slider',
       },
       step: {
