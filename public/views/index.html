@@ -186,6 +186,7 @@
 
     // pick a random condition for the subject at the start of the experiment
     var condition_assignment = jsPsych.randomization.sampleWithoutReplacement(['conditionA', 'conditionB'], 1)[0];
+    
     let indices = [0,1,2,3,4,5];
     let shuffled = shuffle(indices);
 
@@ -198,12 +199,12 @@
     var secondlet = ['B or S','T or E','C or R','W or F','P or A','D or L'];
 
     //pointes for sub-additive condition
-    var subword = ['book<br>bouquet<br>bed', 
-                  'table<br>towel<br>toilet',
-                  'chair<br>computer<br>curtain',
-                  'window<br>wardrobe<br>wine rack',
-                  'painting<br>plant<br>printer',
-                  'display case<br>dresser<br>desk'];
+    var subword = ['bird<br>buffalo<br>bicycle', 
+                  'trumpet<br>toll gate<br>trunk',
+                  'cannon<br>cow<br>canoe',
+                  'wheelbarrow<br>water fountain<br>windmill',
+                  'porch<br>pie<br>platform',
+                  'drinking fountain<br>dryer<br>dome'];
 
     shuffle_multiple(firstlet, secondlet, subword, cueword, controlword)
 
@@ -259,7 +260,7 @@
           "<p>Imagine you are playing a game with a friend. Your friend is looking at a photo of a natural scene and tells you about one item they see in the photo. Your task is then to estimate the probability that there are other items visible in the photo that start with a given letter.</p>" +
           "<p>Remember that an object may be present in the scene but not visible in the photo. We are interested in the probablity that the object is visible in the photo.</p>" +
           "<p>On the first page, you will see the item that your friend has told you they see in the scene for 5 seconds, please use this time to consider what scenes you are likely to see this item in. You will then be shown the question asking you to make a judgement about the probability probability of other objects in the scene. You will then have <b>60 seconds </b>to make your judgement by clicking on a slider bar that ranges from 0% to 100%, and click 'Submit'. On the slider bar, closer to zero means low probability, closer to 100% means higher probability.</p>" +
-          "<p>If you do not answer within 60 seconds, a 'Timeout' box will appear and you will not be able to answer that trial any more. Click 'OK' to go on to the next trial. Please try to answer the questions before the timeout.</p>" +
+          "<p>If you do not answer within 30 seconds, a 'Timeout' box will appear and you will not be able to answer that trial any more. Click 'OK' to go on to the next trial. Please try to answer the questions before the timeout.</p>" +
           "<p>There will be a short example on the next page. This example is not part of the actual experiment.</p>"
     ],
     show_clickable_nav: true
@@ -326,14 +327,50 @@
 
         experiment_trials.push({
         type: 'html-slider-response',
-        trial_duration: 60000,
+        trial_duration: 30000,
         data: {
           cueword: cueword[i],
           firstlet: firstlet[i]
         },
         on_load: function () {
                 var timerString = '#time' + timerCounter++;
-                var timerLength = 60,
+                var timerLength = 30,
+                display = document.querySelector(timerString);
+                console.log(timerString)
+                startTimer(timerLength, display, timerString);
+
+                var input = document.querySelector('#jspsych-html-slider-response-response')
+                input.addEventListener('input', function() {
+                  document.querySelector('#answer-display').innerText = input.valueAsNumber.toString() + '%'
+                })
+            },
+        stimulus: '<div><span id="time' + i + '">00:59</span></div><p>I see <b>' + cueword[i] + '</b> in this photo of a scene.</p>' +
+                '<p>What is the probability that I also see:<br> any object starting with ' + firstlet[i] + '</p><br>' +
+                '<p>Your answer is <span id="answer-display"></span></p>'
+        });
+      }
+
+      for (var i = 0; i < 6; i++) {
+        
+        experiment_trials.push({
+        type: 'html-button-response',
+        stimulus: '<p>I see <b>' + cueword[i] + '</b> in this photo of a scene.</p><br>',
+        trial_duration: 3500, // was 5000
+        choices: [],
+        response_ends_trial: false,
+        prompt: ""
+        });
+
+        experiment_trials.push({
+        type: 'html-slider-response',
+        trial_duration: 30000,
+        data: {
+          cueword: cueword[i],
+          firstlet: firstlet[i]
+        },
+        on_load: function () {
+                var timerString = '#time' + timerCounter++;
+                var timerLength = 30,
                 display = document.querySelector(timerString);
                 console.log(timerString)
                 startTimer(timerLength, display, timerString);
@@ -364,7 +401,7 @@
 
         experiment_trials.push({
         type: 'html-slider-response',
-        trial_duration: 60000,
+        trial_duration: 30000,
         data: {
           cueword: cueword[i],
           subword: subword[i],
@@ -372,7 +409,44 @@
         },
         on_load: function () {
                 var timerString = '#time' + timerCounter++;
-                var timerLength = 60,
+                var timerLength = 30,
+                display = document.querySelector(timerString);
+                console.log(timerString)
+                startTimer(timerLength, display, timerString);
+
+                var input = document.querySelector('#jspsych-html-slider-response-response')
+                input.addEventListener('input', function() {
+                  document.querySelector('#answer-display').innerText = input.valueAsNumber.toString() + '%'
+                })
+            },
+        stimulus: '<div><span id="time' + i + '">00:59</span></div><p>I see <b>' + cueword[i] + '</b> in this photo of a scene.</p>' +
+                '<p>What is the probability that I also see: <br>'+ subword[i] +'<br>or any other object starting with ' + firstlet[i] + '</p><br>' +
+                '<p>Your answer is <span id="answer-display"></span></p>'
+        });
+      }
+
+      for (var i = 0; i < 6; i++) {
+        
+        experiment_trials.push({
+        type: 'html-button-response',
+        stimulus: '<p>I see <b>' + cueword[i] + '</b> in this photo of a scene.</p><br>',
+        trial_duration: 3500, // was 5000
+        choices: [],
+        response_ends_trial: false,
+        prompt: ""
+        });
+
+        experiment_trials.push({
+        type: 'html-slider-response',
+        trial_duration: 30000,
+        data: {
+          cueword: cueword[i],
+          subword: subword[i],
+          firstlet: firstlet[i]
+        },
+        on_load: function () {
+                var timerString = '#time' + timerCounter++;
+                var timerLength = 30,
                 display = document.querySelector(timerString);
                 console.log(timerString)
                 startTimer(timerLength, display, timerString);
@@ -388,8 +462,6 @@
         });
       }
     }
-
-
 
     experiment_trials.push({
     type: 'instructions',
@@ -477,14 +549,14 @@
                 
         experiment_trials.push({
         type: 'html-slider-response',
-        trial_duration: 60000,
+        trial_duration: 30000,
         data: {
           cueword: cueword[index],
           secondlet: secondlet[index]
         },
         on_load: function () {
                 var timerString = '#time' + timerCounter++;
-                var timerLength = 60,
+                var timerLength = 30,
                 display = document.querySelector(timerString);
                 console.log(timerString)
                 startTimer(timerLength, display, timerString);
@@ -519,9 +591,6 @@
     };
 
     timeline.push(final_questions)
-
-
-    shuffle_multiple(firstlet, secondlet, subword, cueword, controlword)
 
     // record the condition assignment, subjectid, first and secondlet order, and prolificID in the jsPsych data
     jsPsych.data.addProperties({

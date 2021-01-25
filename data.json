@@ -1,63 +1,223 @@
 [{
     "_id": {
-        "$oid": "600192f4cefb9d00043fa9ba"
+        "$oid": "600195cdfe560f000476084a"
     },
     "data": [
         {
-            "rt": 5950.39499993436,
+            "rt": 4950.889999978244,
             "responses": "{\"Q0\":\"test-prolific-id\"}",
             "trial_type": "survey-text",
             "trial_index": 0,
-            "time_elapsed": 5975,
+            "time_elapsed": 4975,
             "internal_node_id": "0.0-0.0",
-            "subject": "3pf319kerphx6nd",
-            "condition": "conditionA"
+            "subject": "ccvzockf8fjejvz",
+            "condition": "conditionA",
+            "firstlet_origin": [
+                "C",
+                "B",
+                "W",
+                "T",
+                "P",
+                "D"
+            ],
+            "secondlet_origin": [
+                "C or R",
+                "B or S",
+                "W or F",
+                "T or E",
+                "P or A",
+                "D or L"
+            ],
+            "subword_origin": [
+                "chair<br>computer<br>curtain",
+                "book<br>bouquet<br>bed",
+                "window<br>wardrobe<br>wine rack",
+                "table<br>towel<br>toilet",
+                "painting<br>plant<br>printer",
+                "display case<br>dresser<br>desk"
+            ],
+            "cueword_origin": [
+                "a table",
+                "a rug",
+                "a lamp",
+                "a sink",
+                "a chair",
+                "a telephone"
+            ],
+            "controlword_origin": [
+                "table is brown",
+                "rug is red",
+                "lamp is silver",
+                "sink is white",
+                "chair is brown",
+                "telephone is black"
+            ]
         },
         {
-            "view_history": "[{\"page_index\":0,\"viewing_time\":700.3550000954419}]",
-            "rt": 700.6550000514835,
+            "view_history": "[{\"page_index\":0,\"viewing_time\":1265.7300001010299}]",
+            "rt": 1266.1300001200289,
             "order": [
-                0,
                 4,
-                1,
-                3,
+                5,
                 2,
-                5
+                0,
+                1,
+                3
             ],
             "trial_type": "instructions",
             "trial_index": 1,
-            "time_elapsed": 6677,
+            "time_elapsed": 6242,
             "internal_node_id": "0.0-1.0",
-            "subject": "3pf319kerphx6nd",
-            "condition": "conditionA"
+            "subject": "ccvzockf8fjejvz",
+            "condition": "conditionA",
+            "firstlet_origin": [
+                "C",
+                "B",
+                "W",
+                "T",
+                "P",
+                "D"
+            ],
+            "secondlet_origin": [
+                "C or R",
+                "B or S",
+                "W or F",
+                "T or E",
+                "P or A",
+                "D or L"
+            ],
+            "subword_origin": [
+                "chair<br>computer<br>curtain",
+                "book<br>bouquet<br>bed",
+                "window<br>wardrobe<br>wine rack",
+                "table<br>towel<br>toilet",
+                "painting<br>plant<br>printer",
+                "display case<br>dresser<br>desk"
+            ],
+            "cueword_origin": [
+                "a table",
+                "a rug",
+                "a lamp",
+                "a sink",
+                "a chair",
+                "a telephone"
+            ],
+            "controlword_origin": [
+                "table is brown",
+                "rug is red",
+                "lamp is silver",
+                "sink is white",
+                "chair is brown",
+                "telephone is black"
+            ]
         },
         {
-            "rt": 6283.70500006713,
+            "rt": 3245.7249998115003,
             "url": "informed_consent",
             "trial_type": "external-html",
             "trial_index": 2,
-            "time_elapsed": 13017,
+            "time_elapsed": 9661,
             "internal_node_id": "0.0-2.0",
-            "subject": "3pf319kerphx6nd",
-            "condition": "conditionA"
+            "subject": "ccvzockf8fjejvz",
+            "condition": "conditionA",
+            "firstlet_origin": [
+                "C",
+                "B",
+                "W",
+                "T",
+                "P",
+                "D"
+            ],
+            "secondlet_origin": [
+                "C or R",
+                "B or S",
+                "W or F",
+                "T or E",
+                "P or A",
+                "D or L"
+            ],
+            "subword_origin": [
+                "chair<br>computer<br>curtain",
+                "book<br>bouquet<br>bed",
+                "window<br>wardrobe<br>wine rack",
+                "table<br>towel<br>toilet",
+                "painting<br>plant<br>printer",
+                "display case<br>dresser<br>desk"
+            ],
+            "cueword_origin": [
+                "a table",
+                "a rug",
+                "a lamp",
+                "a sink",
+                "a chair",
+                "a telephone"
+            ],
+            "controlword_origin": [
+                "table is brown",
+                "rug is red",
+                "lamp is silver",
+                "sink is white",
+                "chair is brown",
+                "telephone is black"
+            ]
         },
         {
-            "view_history": "[{\"page_index\":0,\"viewing_time\":1195.8949998952448}]",
-            "rt": 1196.1399998981506,
+            "view_history": "[{\"page_index\":0,\"viewing_time\":741.7750000022352}]",
+            "rt": 742.0149999670684,
             "order": [
-                0,
                 4,
-                1,
-                3,
+                5,
                 2,
-                5
+                0,
+                1,
+                3
             ],
             "trial_type": "instructions",
             "trial_index": 3,
-            "time_elapsed": 14214,
+            "time_elapsed": 10404,
             "internal_node_id": "0.0-3.0",
-            "subject": "3pf319kerphx6nd",
-            "condition": "conditionA"
+            "subject": "ccvzockf8fjejvz",
+            "condition": "conditionA",
+            "firstlet_origin": [
+                "C",
+                "B",
+                "W",
+                "T",
+                "P",
+                "D"
+            ],
+            "secondlet_origin": [
+                "C or R",
+                "B or S",
+                "W or F",
+                "T or E",
+                "P or A",
+                "D or L"
+            ],
+            "subword_origin": [
+                "chair<br>computer<br>curtain",
+                "book<br>bouquet<br>bed",
+                "window<br>wardrobe<br>wine rack",
+                "table<br>towel<br>toilet",
+                "painting<br>plant<br>printer",
+                "display case<br>dresser<br>desk"
+            ],
+            "cueword_origin": [
+                "a table",
+                "a rug",
+                "a lamp",
+                "a sink",
+                "a chair",
+                "a telephone"
+            ],
+            "controlword_origin": [
+                "table is brown",
+                "rug is red",
+                "lamp is silver",
+                "sink is white",
+                "chair is brown",
+                "telephone is black"
+            ]
         },
         {
             "rt": null,
@@ -65,198 +225,878 @@
             "button_pressed": null,
             "trial_type": "html-button-response",
             "trial_index": 4,
-            "time_elapsed": 17717,
+            "time_elapsed": 13908,
             "internal_node_id": "0.0-4.0",
-            "subject": "3pf319kerphx6nd",
-            "condition": "conditionA"
+            "subject": "ccvzockf8fjejvz",
+            "condition": "conditionA",
+            "firstlet_origin": [
+                "C",
+                "B",
+                "W",
+                "T",
+                "P",
+                "D"
+            ],
+            "secondlet_origin": [
+                "C or R",
+                "B or S",
+                "W or F",
+                "T or E",
+                "P or A",
+                "D or L"
+            ],
+            "subword_origin": [
+                "chair<br>computer<br>curtain",
+                "book<br>bouquet<br>bed",
+                "window<br>wardrobe<br>wine rack",
+                "table<br>towel<br>toilet",
+                "painting<br>plant<br>printer",
+                "display case<br>dresser<br>desk"
+            ],
+            "cueword_origin": [
+                "a table",
+                "a rug",
+                "a lamp",
+                "a sink",
+                "a chair",
+                "a telephone"
+            ],
+            "controlword_origin": [
+                "table is brown",
+                "rug is red",
+                "lamp is silver",
+                "sink is white",
+                "chair is brown",
+                "telephone is black"
+            ]
         },
         {
-            "rt": 1283.7600000202656,
-            "response": "74",
+            "rt": 1234.5850002020597,
+            "response": "79",
             "stimulus": "<p>This is an example trial</p><br><p>I see <b>a car</b> in this photo of a scene.</p><p>What is the probability that I also see:<br> any other object starting with G</p><br><p>Your answer is <span id=\"answer-display\"></span></p>",
             "trial_type": "html-slider-response",
             "trial_index": 5,
-            "time_elapsed": 19002,
+            "time_elapsed": 15144,
             "internal_node_id": "0.0-5.0",
-            "subject": "3pf319kerphx6nd",
-            "condition": "conditionA"
+            "subject": "ccvzockf8fjejvz",
+            "condition": "conditionA",
+            "firstlet_origin": [
+                "C",
+                "B",
+                "W",
+                "T",
+                "P",
+                "D"
+            ],
+            "secondlet_origin": [
+                "C or R",
+                "B or S",
+                "W or F",
+                "T or E",
+                "P or A",
+                "D or L"
+            ],
+            "subword_origin": [
+                "chair<br>computer<br>curtain",
+                "book<br>bouquet<br>bed",
+                "window<br>wardrobe<br>wine rack",
+                "table<br>towel<br>toilet",
+                "painting<br>plant<br>printer",
+                "display case<br>dresser<br>desk"
+            ],
+            "cueword_origin": [
+                "a table",
+                "a rug",
+                "a lamp",
+                "a sink",
+                "a chair",
+                "a telephone"
+            ],
+            "controlword_origin": [
+                "table is brown",
+                "rug is red",
+                "lamp is silver",
+                "sink is white",
+                "chair is brown",
+                "telephone is black"
+            ]
         },
         {
-            "rt": 964.9600000120699,
+            "rt": 772.0850000623614,
             "stimulus": "<h3>The experiment will now begin. Please press any key to continue.</h3>",
             "key_press": 32,
             "trial_type": "html-keyboard-response",
             "trial_index": 6,
-            "time_elapsed": 19968,
+            "time_elapsed": 15917,
             "internal_node_id": "0.0-6.0",
-            "subject": "3pf319kerphx6nd",
-            "condition": "conditionA"
-        },
-        {
-            "rt": null,
-            "stimulus": "<p>I see <b>a lamp</b> in this photo of a scene.</p><br>",
-            "button_pressed": null,
-            "trial_type": "html-button-response",
-            "trial_index": 7,
-            "time_elapsed": 23469,
-            "internal_node_id": "0.0-7.0-0.0",
-            "subject": "3pf319kerphx6nd",
-            "condition": "conditionA"
-        },
-        {
-            "rt": 1882.719999877736,
-            "response": "83",
-            "stimulus": "<div><span id=\"time0\">00:59</span></div><p>I see <b>a lamp</b> in this photo of a scene.</p><p>What is the probability that I also see:<br> any object starting with W</p><br><p>Your answer is <span id=\"answer-display\"></span></p>",
-            "cueword": "a lamp",
-            "firstlet": "W",
-            "trial_type": "html-slider-response",
-            "trial_index": 8,
-            "time_elapsed": 25353,
-            "internal_node_id": "0.0-7.0-1.0",
-            "subject": "3pf319kerphx6nd",
-            "condition": "conditionA"
-        },
-        {
-            "rt": null,
-            "stimulus": "<p>I see <b>a rug</b> in this photo of a scene.</p><br>",
-            "button_pressed": null,
-            "trial_type": "html-button-response",
-            "trial_index": 9,
-            "time_elapsed": 28855,
-            "internal_node_id": "0.0-7.0-2.0",
-            "subject": "3pf319kerphx6nd",
-            "condition": "conditionA"
-        },
-        {
-            "rt": 1821.4400000870228,
-            "response": "12",
-            "stimulus": "<div><span id=\"time1\">00:59</span></div><p>I see <b>a rug</b> in this photo of a scene.</p><p>What is the probability that I also see:<br> any object starting with B</p><br><p>Your answer is <span id=\"answer-display\"></span></p>",
-            "cueword": "a rug",
-            "firstlet": "B",
-            "trial_type": "html-slider-response",
-            "trial_index": 10,
-            "time_elapsed": 30678,
-            "internal_node_id": "0.0-7.0-3.0",
-            "subject": "3pf319kerphx6nd",
-            "condition": "conditionA"
-        },
-        {
-            "rt": null,
-            "stimulus": "<p>I see <b>a telephone</b> in this photo of a scene.</p><br>",
-            "button_pressed": null,
-            "trial_type": "html-button-response",
-            "trial_index": 11,
-            "time_elapsed": 34180,
-            "internal_node_id": "0.0-7.0-4.0",
-            "subject": "3pf319kerphx6nd",
-            "condition": "conditionA"
-        },
-        {
-            "rt": 1765.9599999897182,
-            "response": "94",
-            "stimulus": "<div><span id=\"time2\">00:59</span></div><p>I see <b>a telephone</b> in this photo of a scene.</p><p>What is the probability that I also see:<br> any object starting with D</p><br><p>Your answer is <span id=\"answer-display\"></span></p>",
-            "cueword": "a telephone",
-            "firstlet": "D",
-            "trial_type": "html-slider-response",
-            "trial_index": 12,
-            "time_elapsed": 35947,
-            "internal_node_id": "0.0-7.0-5.0",
-            "subject": "3pf319kerphx6nd",
-            "condition": "conditionA"
-        },
-        {
-            "rt": null,
-            "stimulus": "<p>I see <b>a sink</b> in this photo of a scene.</p><br>",
-            "button_pressed": null,
-            "trial_type": "html-button-response",
-            "trial_index": 13,
-            "time_elapsed": 39452,
-            "internal_node_id": "0.0-7.0-6.0",
-            "subject": "3pf319kerphx6nd",
-            "condition": "conditionA"
-        },
-        {
-            "rt": 1253.9800000377,
-            "response": "6",
-            "stimulus": "<div><span id=\"time3\">00:59</span></div><p>I see <b>a sink</b> in this photo of a scene.</p><p>What is the probability that I also see:<br> any object starting with T</p><br><p>Your answer is <span id=\"answer-display\"></span></p>",
-            "cueword": "a sink",
-            "firstlet": "T",
-            "trial_type": "html-slider-response",
-            "trial_index": 14,
-            "time_elapsed": 40708,
-            "internal_node_id": "0.0-7.0-7.0",
-            "subject": "3pf319kerphx6nd",
-            "condition": "conditionA"
-        },
-        {
-            "rt": null,
-            "stimulus": "<p>I see <b>a table</b> in this photo of a scene.</p><br>",
-            "button_pressed": null,
-            "trial_type": "html-button-response",
-            "trial_index": 15,
-            "time_elapsed": 44209,
-            "internal_node_id": "0.0-7.0-8.0",
-            "subject": "3pf319kerphx6nd",
-            "condition": "conditionA"
-        },
-        {
-            "rt": 1608.360000187531,
-            "response": "92",
-            "stimulus": "<div><span id=\"time4\">00:59</span></div><p>I see <b>a table</b> in this photo of a scene.</p><p>What is the probability that I also see:<br> any object starting with C</p><br><p>Your answer is <span id=\"answer-display\"></span></p>",
-            "cueword": "a table",
-            "firstlet": "C",
-            "trial_type": "html-slider-response",
-            "trial_index": 16,
-            "time_elapsed": 45819,
-            "internal_node_id": "0.0-7.0-9.0",
-            "subject": "3pf319kerphx6nd",
-            "condition": "conditionA"
+            "subject": "ccvzockf8fjejvz",
+            "condition": "conditionA",
+            "firstlet_origin": [
+                "C",
+                "B",
+                "W",
+                "T",
+                "P",
+                "D"
+            ],
+            "secondlet_origin": [
+                "C or R",
+                "B or S",
+                "W or F",
+                "T or E",
+                "P or A",
+                "D or L"
+            ],
+            "subword_origin": [
+                "chair<br>computer<br>curtain",
+                "book<br>bouquet<br>bed",
+                "window<br>wardrobe<br>wine rack",
+                "table<br>towel<br>toilet",
+                "painting<br>plant<br>printer",
+                "display case<br>dresser<br>desk"
+            ],
+            "cueword_origin": [
+                "a table",
+                "a rug",
+                "a lamp",
+                "a sink",
+                "a chair",
+                "a telephone"
+            ],
+            "controlword_origin": [
+                "table is brown",
+                "rug is red",
+                "lamp is silver",
+                "sink is white",
+                "chair is brown",
+                "telephone is black"
+            ]
         },
         {
             "rt": null,
             "stimulus": "<p>I see <b>a chair</b> in this photo of a scene.</p><br>",
             "button_pressed": null,
             "trial_type": "html-button-response",
-            "trial_index": 17,
-            "time_elapsed": 49322,
-            "internal_node_id": "0.0-7.0-10.0",
-            "subject": "3pf319kerphx6nd",
-            "condition": "conditionA"
+            "trial_index": 7,
+            "time_elapsed": 19420,
+            "internal_node_id": "0.0-7.0-0.0",
+            "subject": "ccvzockf8fjejvz",
+            "condition": "conditionA",
+            "firstlet_origin": [
+                "C",
+                "B",
+                "W",
+                "T",
+                "P",
+                "D"
+            ],
+            "secondlet_origin": [
+                "C or R",
+                "B or S",
+                "W or F",
+                "T or E",
+                "P or A",
+                "D or L"
+            ],
+            "subword_origin": [
+                "chair<br>computer<br>curtain",
+                "book<br>bouquet<br>bed",
+                "window<br>wardrobe<br>wine rack",
+                "table<br>towel<br>toilet",
+                "painting<br>plant<br>printer",
+                "display case<br>dresser<br>desk"
+            ],
+            "cueword_origin": [
+                "a table",
+                "a rug",
+                "a lamp",
+                "a sink",
+                "a chair",
+                "a telephone"
+            ],
+            "controlword_origin": [
+                "table is brown",
+                "rug is red",
+                "lamp is silver",
+                "sink is white",
+                "chair is brown",
+                "telephone is black"
+            ]
         },
         {
-            "rt": 1102.1049998234957,
-            "response": "9",
-            "stimulus": "<div><span id=\"time5\">00:59</span></div><p>I see <b>a chair</b> in this photo of a scene.</p><p>What is the probability that I also see:<br> any object starting with P</p><br><p>Your answer is <span id=\"answer-display\"></span></p>",
+            "rt": 1188.594999955967,
+            "response": "7",
+            "stimulus": "<div><span id=\"time0\">00:59</span></div><p>I see <b>a chair</b> in this photo of a scene.</p><p>What is the probability that I also see:<br> any object starting with P</p><br><p>Your answer is <span id=\"answer-display\"></span></p>",
             "cueword": "a chair",
             "firstlet": "P",
             "trial_type": "html-slider-response",
-            "trial_index": 18,
-            "time_elapsed": 50425,
-            "internal_node_id": "0.0-7.0-11.0",
-            "subject": "3pf319kerphx6nd",
-            "condition": "conditionA"
+            "trial_index": 8,
+            "time_elapsed": 20610,
+            "internal_node_id": "0.0-7.0-1.0",
+            "subject": "ccvzockf8fjejvz",
+            "condition": "conditionA",
+            "firstlet_origin": [
+                "C",
+                "B",
+                "W",
+                "T",
+                "P",
+                "D"
+            ],
+            "secondlet_origin": [
+                "C or R",
+                "B or S",
+                "W or F",
+                "T or E",
+                "P or A",
+                "D or L"
+            ],
+            "subword_origin": [
+                "chair<br>computer<br>curtain",
+                "book<br>bouquet<br>bed",
+                "window<br>wardrobe<br>wine rack",
+                "table<br>towel<br>toilet",
+                "painting<br>plant<br>printer",
+                "display case<br>dresser<br>desk"
+            ],
+            "cueword_origin": [
+                "a table",
+                "a rug",
+                "a lamp",
+                "a sink",
+                "a chair",
+                "a telephone"
+            ],
+            "controlword_origin": [
+                "table is brown",
+                "rug is red",
+                "lamp is silver",
+                "sink is white",
+                "chair is brown",
+                "telephone is black"
+            ]
         },
         {
-            "view_history": "[{\"page_index\":0,\"viewing_time\":960.9749999362975},{\"page_index\":1,\"viewing_time\":463.8650000561029}]",
-            "rt": 1425.054999999702,
+            "rt": null,
+            "stimulus": "<p>I see <b>a telephone</b> in this photo of a scene.</p><br>",
+            "button_pressed": null,
+            "trial_type": "html-button-response",
+            "trial_index": 9,
+            "time_elapsed": 24112,
+            "internal_node_id": "0.0-7.0-2.0",
+            "subject": "ccvzockf8fjejvz",
+            "condition": "conditionA",
+            "firstlet_origin": [
+                "C",
+                "B",
+                "W",
+                "T",
+                "P",
+                "D"
+            ],
+            "secondlet_origin": [
+                "C or R",
+                "B or S",
+                "W or F",
+                "T or E",
+                "P or A",
+                "D or L"
+            ],
+            "subword_origin": [
+                "chair<br>computer<br>curtain",
+                "book<br>bouquet<br>bed",
+                "window<br>wardrobe<br>wine rack",
+                "table<br>towel<br>toilet",
+                "painting<br>plant<br>printer",
+                "display case<br>dresser<br>desk"
+            ],
+            "cueword_origin": [
+                "a table",
+                "a rug",
+                "a lamp",
+                "a sink",
+                "a chair",
+                "a telephone"
+            ],
+            "controlword_origin": [
+                "table is brown",
+                "rug is red",
+                "lamp is silver",
+                "sink is white",
+                "chair is brown",
+                "telephone is black"
+            ]
+        },
+        {
+            "rt": 971.1249999236315,
+            "response": "87",
+            "stimulus": "<div><span id=\"time1\">00:59</span></div><p>I see <b>a telephone</b> in this photo of a scene.</p><p>What is the probability that I also see:<br> any object starting with D</p><br><p>Your answer is <span id=\"answer-display\"></span></p>",
+            "cueword": "a telephone",
+            "firstlet": "D",
+            "trial_type": "html-slider-response",
+            "trial_index": 10,
+            "time_elapsed": 25084,
+            "internal_node_id": "0.0-7.0-3.0",
+            "subject": "ccvzockf8fjejvz",
+            "condition": "conditionA",
+            "firstlet_origin": [
+                "C",
+                "B",
+                "W",
+                "T",
+                "P",
+                "D"
+            ],
+            "secondlet_origin": [
+                "C or R",
+                "B or S",
+                "W or F",
+                "T or E",
+                "P or A",
+                "D or L"
+            ],
+            "subword_origin": [
+                "chair<br>computer<br>curtain",
+                "book<br>bouquet<br>bed",
+                "window<br>wardrobe<br>wine rack",
+                "table<br>towel<br>toilet",
+                "painting<br>plant<br>printer",
+                "display case<br>dresser<br>desk"
+            ],
+            "cueword_origin": [
+                "a table",
+                "a rug",
+                "a lamp",
+                "a sink",
+                "a chair",
+                "a telephone"
+            ],
+            "controlword_origin": [
+                "table is brown",
+                "rug is red",
+                "lamp is silver",
+                "sink is white",
+                "chair is brown",
+                "telephone is black"
+            ]
+        },
+        {
+            "rt": null,
+            "stimulus": "<p>I see <b>a rug</b> in this photo of a scene.</p><br>",
+            "button_pressed": null,
+            "trial_type": "html-button-response",
+            "trial_index": 11,
+            "time_elapsed": 28585,
+            "internal_node_id": "0.0-7.0-4.0",
+            "subject": "ccvzockf8fjejvz",
+            "condition": "conditionA",
+            "firstlet_origin": [
+                "C",
+                "B",
+                "W",
+                "T",
+                "P",
+                "D"
+            ],
+            "secondlet_origin": [
+                "C or R",
+                "B or S",
+                "W or F",
+                "T or E",
+                "P or A",
+                "D or L"
+            ],
+            "subword_origin": [
+                "chair<br>computer<br>curtain",
+                "book<br>bouquet<br>bed",
+                "window<br>wardrobe<br>wine rack",
+                "table<br>towel<br>toilet",
+                "painting<br>plant<br>printer",
+                "display case<br>dresser<br>desk"
+            ],
+            "cueword_origin": [
+                "a table",
+                "a rug",
+                "a lamp",
+                "a sink",
+                "a chair",
+                "a telephone"
+            ],
+            "controlword_origin": [
+                "table is brown",
+                "rug is red",
+                "lamp is silver",
+                "sink is white",
+                "chair is brown",
+                "telephone is black"
+            ]
+        },
+        {
+            "rt": 1282.789999851957,
+            "response": "14",
+            "stimulus": "<div><span id=\"time2\">00:59</span></div><p>I see <b>a rug</b> in this photo of a scene.</p><p>What is the probability that I also see:<br> any object starting with B</p><br><p>Your answer is <span id=\"answer-display\"></span></p>",
+            "cueword": "a rug",
+            "firstlet": "B",
+            "trial_type": "html-slider-response",
+            "trial_index": 12,
+            "time_elapsed": 29869,
+            "internal_node_id": "0.0-7.0-5.0",
+            "subject": "ccvzockf8fjejvz",
+            "condition": "conditionA",
+            "firstlet_origin": [
+                "C",
+                "B",
+                "W",
+                "T",
+                "P",
+                "D"
+            ],
+            "secondlet_origin": [
+                "C or R",
+                "B or S",
+                "W or F",
+                "T or E",
+                "P or A",
+                "D or L"
+            ],
+            "subword_origin": [
+                "chair<br>computer<br>curtain",
+                "book<br>bouquet<br>bed",
+                "window<br>wardrobe<br>wine rack",
+                "table<br>towel<br>toilet",
+                "painting<br>plant<br>printer",
+                "display case<br>dresser<br>desk"
+            ],
+            "cueword_origin": [
+                "a table",
+                "a rug",
+                "a lamp",
+                "a sink",
+                "a chair",
+                "a telephone"
+            ],
+            "controlword_origin": [
+                "table is brown",
+                "rug is red",
+                "lamp is silver",
+                "sink is white",
+                "chair is brown",
+                "telephone is black"
+            ]
+        },
+        {
+            "rt": null,
+            "stimulus": "<p>I see <b>a table</b> in this photo of a scene.</p><br>",
+            "button_pressed": null,
+            "trial_type": "html-button-response",
+            "trial_index": 13,
+            "time_elapsed": 33370,
+            "internal_node_id": "0.0-7.0-6.0",
+            "subject": "ccvzockf8fjejvz",
+            "condition": "conditionA",
+            "firstlet_origin": [
+                "C",
+                "B",
+                "W",
+                "T",
+                "P",
+                "D"
+            ],
+            "secondlet_origin": [
+                "C or R",
+                "B or S",
+                "W or F",
+                "T or E",
+                "P or A",
+                "D or L"
+            ],
+            "subword_origin": [
+                "chair<br>computer<br>curtain",
+                "book<br>bouquet<br>bed",
+                "window<br>wardrobe<br>wine rack",
+                "table<br>towel<br>toilet",
+                "painting<br>plant<br>printer",
+                "display case<br>dresser<br>desk"
+            ],
+            "cueword_origin": [
+                "a table",
+                "a rug",
+                "a lamp",
+                "a sink",
+                "a chair",
+                "a telephone"
+            ],
+            "controlword_origin": [
+                "table is brown",
+                "rug is red",
+                "lamp is silver",
+                "sink is white",
+                "chair is brown",
+                "telephone is black"
+            ]
+        },
+        {
+            "rt": 1236.460000043735,
+            "response": "89",
+            "stimulus": "<div><span id=\"time3\">00:59</span></div><p>I see <b>a table</b> in this photo of a scene.</p><p>What is the probability that I also see:<br> any object starting with C</p><br><p>Your answer is <span id=\"answer-display\"></span></p>",
+            "cueword": "a table",
+            "firstlet": "C",
+            "trial_type": "html-slider-response",
+            "trial_index": 14,
+            "time_elapsed": 34608,
+            "internal_node_id": "0.0-7.0-7.0",
+            "subject": "ccvzockf8fjejvz",
+            "condition": "conditionA",
+            "firstlet_origin": [
+                "C",
+                "B",
+                "W",
+                "T",
+                "P",
+                "D"
+            ],
+            "secondlet_origin": [
+                "C or R",
+                "B or S",
+                "W or F",
+                "T or E",
+                "P or A",
+                "D or L"
+            ],
+            "subword_origin": [
+                "chair<br>computer<br>curtain",
+                "book<br>bouquet<br>bed",
+                "window<br>wardrobe<br>wine rack",
+                "table<br>towel<br>toilet",
+                "painting<br>plant<br>printer",
+                "display case<br>dresser<br>desk"
+            ],
+            "cueword_origin": [
+                "a table",
+                "a rug",
+                "a lamp",
+                "a sink",
+                "a chair",
+                "a telephone"
+            ],
+            "controlword_origin": [
+                "table is brown",
+                "rug is red",
+                "lamp is silver",
+                "sink is white",
+                "chair is brown",
+                "telephone is black"
+            ]
+        },
+        {
+            "rt": null,
+            "stimulus": "<p>I see <b>a lamp</b> in this photo of a scene.</p><br>",
+            "button_pressed": null,
+            "trial_type": "html-button-response",
+            "trial_index": 15,
+            "time_elapsed": 38112,
+            "internal_node_id": "0.0-7.0-8.0",
+            "subject": "ccvzockf8fjejvz",
+            "condition": "conditionA",
+            "firstlet_origin": [
+                "C",
+                "B",
+                "W",
+                "T",
+                "P",
+                "D"
+            ],
+            "secondlet_origin": [
+                "C or R",
+                "B or S",
+                "W or F",
+                "T or E",
+                "P or A",
+                "D or L"
+            ],
+            "subword_origin": [
+                "chair<br>computer<br>curtain",
+                "book<br>bouquet<br>bed",
+                "window<br>wardrobe<br>wine rack",
+                "table<br>towel<br>toilet",
+                "painting<br>plant<br>printer",
+                "display case<br>dresser<br>desk"
+            ],
+            "cueword_origin": [
+                "a table",
+                "a rug",
+                "a lamp",
+                "a sink",
+                "a chair",
+                "a telephone"
+            ],
+            "controlword_origin": [
+                "table is brown",
+                "rug is red",
+                "lamp is silver",
+                "sink is white",
+                "chair is brown",
+                "telephone is black"
+            ]
+        },
+        {
+            "rt": 1558.2500000018626,
+            "response": "9",
+            "stimulus": "<div><span id=\"time4\">00:59</span></div><p>I see <b>a lamp</b> in this photo of a scene.</p><p>What is the probability that I also see:<br> any object starting with W</p><br><p>Your answer is <span id=\"answer-display\"></span></p>",
+            "cueword": "a lamp",
+            "firstlet": "W",
+            "trial_type": "html-slider-response",
+            "trial_index": 16,
+            "time_elapsed": 39671,
+            "internal_node_id": "0.0-7.0-9.0",
+            "subject": "ccvzockf8fjejvz",
+            "condition": "conditionA",
+            "firstlet_origin": [
+                "C",
+                "B",
+                "W",
+                "T",
+                "P",
+                "D"
+            ],
+            "secondlet_origin": [
+                "C or R",
+                "B or S",
+                "W or F",
+                "T or E",
+                "P or A",
+                "D or L"
+            ],
+            "subword_origin": [
+                "chair<br>computer<br>curtain",
+                "book<br>bouquet<br>bed",
+                "window<br>wardrobe<br>wine rack",
+                "table<br>towel<br>toilet",
+                "painting<br>plant<br>printer",
+                "display case<br>dresser<br>desk"
+            ],
+            "cueword_origin": [
+                "a table",
+                "a rug",
+                "a lamp",
+                "a sink",
+                "a chair",
+                "a telephone"
+            ],
+            "controlword_origin": [
+                "table is brown",
+                "rug is red",
+                "lamp is silver",
+                "sink is white",
+                "chair is brown",
+                "telephone is black"
+            ]
+        },
+        {
+            "rt": null,
+            "stimulus": "<p>I see <b>a sink</b> in this photo of a scene.</p><br>",
+            "button_pressed": null,
+            "trial_type": "html-button-response",
+            "trial_index": 17,
+            "time_elapsed": 43172,
+            "internal_node_id": "0.0-7.0-10.0",
+            "subject": "ccvzockf8fjejvz",
+            "condition": "conditionA",
+            "firstlet_origin": [
+                "C",
+                "B",
+                "W",
+                "T",
+                "P",
+                "D"
+            ],
+            "secondlet_origin": [
+                "C or R",
+                "B or S",
+                "W or F",
+                "T or E",
+                "P or A",
+                "D or L"
+            ],
+            "subword_origin": [
+                "chair<br>computer<br>curtain",
+                "book<br>bouquet<br>bed",
+                "window<br>wardrobe<br>wine rack",
+                "table<br>towel<br>toilet",
+                "painting<br>plant<br>printer",
+                "display case<br>dresser<br>desk"
+            ],
+            "cueword_origin": [
+                "a table",
+                "a rug",
+                "a lamp",
+                "a sink",
+                "a chair",
+                "a telephone"
+            ],
+            "controlword_origin": [
+                "table is brown",
+                "rug is red",
+                "lamp is silver",
+                "sink is white",
+                "chair is brown",
+                "telephone is black"
+            ]
+        },
+        {
+            "rt": 1285.3050001431257,
+            "response": "87",
+            "stimulus": "<div><span id=\"time5\">00:59</span></div><p>I see <b>a sink</b> in this photo of a scene.</p><p>What is the probability that I also see:<br> any object starting with T</p><br><p>Your answer is <span id=\"answer-display\"></span></p>",
+            "cueword": "a sink",
+            "firstlet": "T",
+            "trial_type": "html-slider-response",
+            "trial_index": 18,
+            "time_elapsed": 44459,
+            "internal_node_id": "0.0-7.0-11.0",
+            "subject": "ccvzockf8fjejvz",
+            "condition": "conditionA",
+            "firstlet_origin": [
+                "C",
+                "B",
+                "W",
+                "T",
+                "P",
+                "D"
+            ],
+            "secondlet_origin": [
+                "C or R",
+                "B or S",
+                "W or F",
+                "T or E",
+                "P or A",
+                "D or L"
+            ],
+            "subword_origin": [
+                "chair<br>computer<br>curtain",
+                "book<br>bouquet<br>bed",
+                "window<br>wardrobe<br>wine rack",
+                "table<br>towel<br>toilet",
+                "painting<br>plant<br>printer",
+                "display case<br>dresser<br>desk"
+            ],
+            "cueword_origin": [
+                "a table",
+                "a rug",
+                "a lamp",
+                "a sink",
+                "a chair",
+                "a telephone"
+            ],
+            "controlword_origin": [
+                "table is brown",
+                "rug is red",
+                "lamp is silver",
+                "sink is white",
+                "chair is brown",
+                "telephone is black"
+            ]
+        },
+        {
+            "view_history": "[{\"page_index\":0,\"viewing_time\":686.615000013262},{\"page_index\":1,\"viewing_time\":516.279999865219}]",
+            "rt": 1203.1000000424683,
             "trial_type": "instructions",
             "trial_index": 19,
-            "time_elapsed": 51851,
+            "time_elapsed": 45663,
             "internal_node_id": "0.0-7.0-12.0",
-            "subject": "3pf319kerphx6nd",
-            "condition": "conditionA"
+            "subject": "ccvzockf8fjejvz",
+            "condition": "conditionA",
+            "firstlet_origin": [
+                "C",
+                "B",
+                "W",
+                "T",
+                "P",
+                "D"
+            ],
+            "secondlet_origin": [
+                "C or R",
+                "B or S",
+                "W or F",
+                "T or E",
+                "P or A",
+                "D or L"
+            ],
+            "subword_origin": [
+                "chair<br>computer<br>curtain",
+                "book<br>bouquet<br>bed",
+                "window<br>wardrobe<br>wine rack",
+                "table<br>towel<br>toilet",
+                "painting<br>plant<br>printer",
+                "display case<br>dresser<br>desk"
+            ],
+            "cueword_origin": [
+                "a table",
+                "a rug",
+                "a lamp",
+                "a sink",
+                "a chair",
+                "a telephone"
+            ],
+            "controlword_origin": [
+                "table is brown",
+                "rug is red",
+                "lamp is silver",
+                "sink is white",
+                "chair is brown",
+                "telephone is black"
+            ]
         },
         {
-            "rt": 1770.1499999966472,
-            "stimulus": "<img src = \"img/9.png\" width=\"200\" height=\"200\">",
+            "rt": 761.5100000984967,
+            "stimulus": "<img src = \"img/5.png\" width=\"200\" height=\"200\">",
             "key_press": 68,
             "correct_response_data": 68,
             "trial_type": "html-keyboard-response",
             "trial_index": 20,
-            "time_elapsed": 53628,
+            "time_elapsed": 46425,
             "internal_node_id": "0.0-7.0-13.0",
-            "subject": "3pf319kerphx6nd",
-            "condition": "conditionA"
+            "subject": "ccvzockf8fjejvz",
+            "condition": "conditionA",
+            "firstlet_origin": [
+                "C",
+                "B",
+                "W",
+                "T",
+                "P",
+                "D"
+            ],
+            "secondlet_origin": [
+                "C or R",
+                "B or S",
+                "W or F",
+                "T or E",
+                "P or A",
+                "D or L"
+            ],
+            "subword_origin": [
+                "chair<br>computer<br>curtain",
+                "book<br>bouquet<br>bed",
+                "window<br>wardrobe<br>wine rack",
+                "table<br>towel<br>toilet",
+                "painting<br>plant<br>printer",
+                "display case<br>dresser<br>desk"
+            ],
+            "cueword_origin": [
+                "a table",
+                "a rug",
+                "a lamp",
+                "a sink",
+                "a chair",
+                "a telephone"
+            ],
+            "controlword_origin": [
+                "table is brown",
+                "rug is red",
+                "lamp is silver",
+                "sink is white",
+                "chair is brown",
+                "telephone is black"
+            ]
         },
         {
             "rt": null,
@@ -264,22 +1104,102 @@
             "button_pressed": null,
             "trial_type": "html-button-response",
             "trial_index": 21,
-            "time_elapsed": 55628,
+            "time_elapsed": 48427,
             "internal_node_id": "0.0-7.0-14.0",
-            "subject": "3pf319kerphx6nd",
-            "condition": "conditionA"
+            "subject": "ccvzockf8fjejvz",
+            "condition": "conditionA",
+            "firstlet_origin": [
+                "C",
+                "B",
+                "W",
+                "T",
+                "P",
+                "D"
+            ],
+            "secondlet_origin": [
+                "C or R",
+                "B or S",
+                "W or F",
+                "T or E",
+                "P or A",
+                "D or L"
+            ],
+            "subword_origin": [
+                "chair<br>computer<br>curtain",
+                "book<br>bouquet<br>bed",
+                "window<br>wardrobe<br>wine rack",
+                "table<br>towel<br>toilet",
+                "painting<br>plant<br>printer",
+                "display case<br>dresser<br>desk"
+            ],
+            "cueword_origin": [
+                "a table",
+                "a rug",
+                "a lamp",
+                "a sink",
+                "a chair",
+                "a telephone"
+            ],
+            "controlword_origin": [
+                "table is brown",
+                "rug is red",
+                "lamp is silver",
+                "sink is white",
+                "chair is brown",
+                "telephone is black"
+            ]
         },
         {
-            "rt": 1213.0849999375641,
+            "rt": 446.9800000078976,
             "stimulus": "<img src = \"img/7.png\" width=\"200\" height=\"200\">",
             "key_press": 68,
             "correct_response_data": 68,
             "trial_type": "html-keyboard-response",
             "trial_index": 22,
-            "time_elapsed": 56842,
+            "time_elapsed": 48874,
             "internal_node_id": "0.0-7.0-15.0",
-            "subject": "3pf319kerphx6nd",
-            "condition": "conditionA"
+            "subject": "ccvzockf8fjejvz",
+            "condition": "conditionA",
+            "firstlet_origin": [
+                "C",
+                "B",
+                "W",
+                "T",
+                "P",
+                "D"
+            ],
+            "secondlet_origin": [
+                "C or R",
+                "B or S",
+                "W or F",
+                "T or E",
+                "P or A",
+                "D or L"
+            ],
+            "subword_origin": [
+                "chair<br>computer<br>curtain",
+                "book<br>bouquet<br>bed",
+                "window<br>wardrobe<br>wine rack",
+                "table<br>towel<br>toilet",
+                "painting<br>plant<br>printer",
+                "display case<br>dresser<br>desk"
+            ],
+            "cueword_origin": [
+                "a table",
+                "a rug",
+                "a lamp",
+                "a sink",
+                "a chair",
+                "a telephone"
+            ],
+            "controlword_origin": [
+                "table is brown",
+                "rug is red",
+                "lamp is silver",
+                "sink is white",
+                "chair is brown",
+                "telephone is black"
+            ]
         },
         {
             "rt": null,
@@ -287,22 +1207,102 @@
             "button_pressed": null,
             "trial_type": "html-button-response",
             "trial_index": 23,
-            "time_elapsed": 58846,
+            "time_elapsed": 50876,
             "internal_node_id": "0.0-7.0-16.0",
-            "subject": "3pf319kerphx6nd",
-            "condition": "conditionA"
+            "subject": "ccvzockf8fjejvz",
+            "condition": "conditionA",
+            "firstlet_origin": [
+                "C",
+                "B",
+                "W",
+                "T",
+                "P",
+                "D"
+            ],
+            "secondlet_origin": [
+                "C or R",
+                "B or S",
+                "W or F",
+                "T or E",
+                "P or A",
+                "D or L"
+            ],
+            "subword_origin": [
+                "chair<br>computer<br>curtain",
+                "book<br>bouquet<br>bed",
+                "window<br>wardrobe<br>wine rack",
+                "table<br>towel<br>toilet",
+                "painting<br>plant<br>printer",
+                "display case<br>dresser<br>desk"
+            ],
+            "cueword_origin": [
+                "a table",
+                "a rug",
+                "a lamp",
+                "a sink",
+                "a chair",
+                "a telephone"
+            ],
+            "controlword_origin": [
+                "table is brown",
+                "rug is red",
+                "lamp is silver",
+                "sink is white",
+                "chair is brown",
+                "telephone is black"
+            ]
         },
         {
-            "rt": 635.0300000049174,
+            "rt": 24.239999940618873,
             "stimulus": "<img src = \"img/4.png\" width=\"200\" height=\"200\">",
             "key_press": 68,
             "correct_response_data": 68,
             "trial_type": "html-keyboard-response",
             "trial_index": 24,
-            "time_elapsed": 59482,
+            "time_elapsed": 50901,
             "internal_node_id": "0.0-7.0-17.0",
-            "subject": "3pf319kerphx6nd",
-            "condition": "conditionA"
+            "subject": "ccvzockf8fjejvz",
+            "condition": "conditionA",
+            "firstlet_origin": [
+                "C",
+                "B",
+                "W",
+                "T",
+                "P",
+                "D"
+            ],
+            "secondlet_origin": [
+                "C or R",
+                "B or S",
+                "W or F",
+                "T or E",
+                "P or A",
+                "D or L"
+            ],
+            "subword_origin": [
+                "chair<br>computer<br>curtain",
+                "book<br>bouquet<br>bed",
+                "window<br>wardrobe<br>wine rack",
+                "table<br>towel<br>toilet",
+                "painting<br>plant<br>printer",
+                "display case<br>dresser<br>desk"
+            ],
+            "cueword_origin": [
+                "a table",
+                "a rug",
+                "a lamp",
+                "a sink",
+                "a chair",
+                "a telephone"
+            ],
+            "controlword_origin": [
+                "table is brown",
+                "rug is red",
+                "lamp is silver",
+                "sink is white",
+                "chair is brown",
+                "telephone is black"
+            ]
         },
         {
             "rt": null,
@@ -310,112 +1310,512 @@
             "button_pressed": null,
             "trial_type": "html-button-response",
             "trial_index": 25,
-            "time_elapsed": 61483,
+            "time_elapsed": 52902,
             "internal_node_id": "0.0-7.0-18.0",
-            "subject": "3pf319kerphx6nd",
-            "condition": "conditionA"
+            "subject": "ccvzockf8fjejvz",
+            "condition": "conditionA",
+            "firstlet_origin": [
+                "C",
+                "B",
+                "W",
+                "T",
+                "P",
+                "D"
+            ],
+            "secondlet_origin": [
+                "C or R",
+                "B or S",
+                "W or F",
+                "T or E",
+                "P or A",
+                "D or L"
+            ],
+            "subword_origin": [
+                "chair<br>computer<br>curtain",
+                "book<br>bouquet<br>bed",
+                "window<br>wardrobe<br>wine rack",
+                "table<br>towel<br>toilet",
+                "painting<br>plant<br>printer",
+                "display case<br>dresser<br>desk"
+            ],
+            "cueword_origin": [
+                "a table",
+                "a rug",
+                "a lamp",
+                "a sink",
+                "a chair",
+                "a telephone"
+            ],
+            "controlword_origin": [
+                "table is brown",
+                "rug is red",
+                "lamp is silver",
+                "sink is white",
+                "chair is brown",
+                "telephone is black"
+            ]
         },
         {
-            "rt": 559.3000000808388,
-            "stimulus": "<img src = \"img/3.png\" width=\"200\" height=\"200\">",
-            "key_press": 68,
-            "correct_response_data": 68,
-            "trial_type": "html-keyboard-response",
-            "trial_index": 26,
-            "time_elapsed": 62043,
-            "internal_node_id": "0.0-7.0-19.0",
-            "subject": "3pf319kerphx6nd",
-            "condition": "conditionA"
-        },
-        {
-            "rt": null,
-            "stimulus": "<p> Correct </p>",
-            "button_pressed": null,
-            "trial_type": "html-button-response",
-            "trial_index": 27,
-            "time_elapsed": 64046,
-            "internal_node_id": "0.0-7.0-20.0",
-            "subject": "3pf319kerphx6nd",
-            "condition": "conditionA"
-        },
-        {
-            "rt": 685.109999962151,
-            "stimulus": "<img src = \"img/3.png\" width=\"200\" height=\"200\">",
+            "rt": 209.62000009603798,
+            "stimulus": "<img src = \"img/5.png\" width=\"200\" height=\"200\">",
             "key_press": 68,
             "correct_response_data": 83,
             "trial_type": "html-keyboard-response",
-            "trial_index": 28,
-            "time_elapsed": 64732,
-            "internal_node_id": "0.0-7.0-21.0",
-            "subject": "3pf319kerphx6nd",
-            "condition": "conditionA"
+            "trial_index": 26,
+            "time_elapsed": 53113,
+            "internal_node_id": "0.0-7.0-19.0",
+            "subject": "ccvzockf8fjejvz",
+            "condition": "conditionA",
+            "firstlet_origin": [
+                "C",
+                "B",
+                "W",
+                "T",
+                "P",
+                "D"
+            ],
+            "secondlet_origin": [
+                "C or R",
+                "B or S",
+                "W or F",
+                "T or E",
+                "P or A",
+                "D or L"
+            ],
+            "subword_origin": [
+                "chair<br>computer<br>curtain",
+                "book<br>bouquet<br>bed",
+                "window<br>wardrobe<br>wine rack",
+                "table<br>towel<br>toilet",
+                "painting<br>plant<br>printer",
+                "display case<br>dresser<br>desk"
+            ],
+            "cueword_origin": [
+                "a table",
+                "a rug",
+                "a lamp",
+                "a sink",
+                "a chair",
+                "a telephone"
+            ],
+            "controlword_origin": [
+                "table is brown",
+                "rug is red",
+                "lamp is silver",
+                "sink is white",
+                "chair is brown",
+                "telephone is black"
+            ]
         },
         {
             "rt": null,
             "stimulus": "<p> Incorrect </p>",
             "button_pressed": null,
             "trial_type": "html-button-response",
-            "trial_index": 29,
-            "time_elapsed": 66733,
-            "internal_node_id": "0.0-7.0-22.0",
-            "subject": "3pf319kerphx6nd",
-            "condition": "conditionA"
+            "trial_index": 27,
+            "time_elapsed": 55115,
+            "internal_node_id": "0.0-7.0-20.0",
+            "subject": "ccvzockf8fjejvz",
+            "condition": "conditionA",
+            "firstlet_origin": [
+                "C",
+                "B",
+                "W",
+                "T",
+                "P",
+                "D"
+            ],
+            "secondlet_origin": [
+                "C or R",
+                "B or S",
+                "W or F",
+                "T or E",
+                "P or A",
+                "D or L"
+            ],
+            "subword_origin": [
+                "chair<br>computer<br>curtain",
+                "book<br>bouquet<br>bed",
+                "window<br>wardrobe<br>wine rack",
+                "table<br>towel<br>toilet",
+                "painting<br>plant<br>printer",
+                "display case<br>dresser<br>desk"
+            ],
+            "cueword_origin": [
+                "a table",
+                "a rug",
+                "a lamp",
+                "a sink",
+                "a chair",
+                "a telephone"
+            ],
+            "controlword_origin": [
+                "table is brown",
+                "rug is red",
+                "lamp is silver",
+                "sink is white",
+                "chair is brown",
+                "telephone is black"
+            ]
         },
         {
-            "rt": 443.8950000330806,
-            "stimulus": "<img src = \"img/4.png\" width=\"200\" height=\"200\">",
-            "key_press": 83,
+            "rt": 699.5200000237674,
+            "stimulus": "<img src = \"img/3.png\" width=\"200\" height=\"200\">",
+            "key_press": 68,
+            "correct_response_data": 68,
+            "trial_type": "html-keyboard-response",
+            "trial_index": 28,
+            "time_elapsed": 55815,
+            "internal_node_id": "0.0-7.0-21.0",
+            "subject": "ccvzockf8fjejvz",
+            "condition": "conditionA",
+            "firstlet_origin": [
+                "C",
+                "B",
+                "W",
+                "T",
+                "P",
+                "D"
+            ],
+            "secondlet_origin": [
+                "C or R",
+                "B or S",
+                "W or F",
+                "T or E",
+                "P or A",
+                "D or L"
+            ],
+            "subword_origin": [
+                "chair<br>computer<br>curtain",
+                "book<br>bouquet<br>bed",
+                "window<br>wardrobe<br>wine rack",
+                "table<br>towel<br>toilet",
+                "painting<br>plant<br>printer",
+                "display case<br>dresser<br>desk"
+            ],
+            "cueword_origin": [
+                "a table",
+                "a rug",
+                "a lamp",
+                "a sink",
+                "a chair",
+                "a telephone"
+            ],
+            "controlword_origin": [
+                "table is brown",
+                "rug is red",
+                "lamp is silver",
+                "sink is white",
+                "chair is brown",
+                "telephone is black"
+            ]
+        },
+        {
+            "rt": null,
+            "stimulus": "<p> Correct </p>",
+            "button_pressed": null,
+            "trial_type": "html-button-response",
+            "trial_index": 29,
+            "time_elapsed": 57819,
+            "internal_node_id": "0.0-7.0-22.0",
+            "subject": "ccvzockf8fjejvz",
+            "condition": "conditionA",
+            "firstlet_origin": [
+                "C",
+                "B",
+                "W",
+                "T",
+                "P",
+                "D"
+            ],
+            "secondlet_origin": [
+                "C or R",
+                "B or S",
+                "W or F",
+                "T or E",
+                "P or A",
+                "D or L"
+            ],
+            "subword_origin": [
+                "chair<br>computer<br>curtain",
+                "book<br>bouquet<br>bed",
+                "window<br>wardrobe<br>wine rack",
+                "table<br>towel<br>toilet",
+                "painting<br>plant<br>printer",
+                "display case<br>dresser<br>desk"
+            ],
+            "cueword_origin": [
+                "a table",
+                "a rug",
+                "a lamp",
+                "a sink",
+                "a chair",
+                "a telephone"
+            ],
+            "controlword_origin": [
+                "table is brown",
+                "rug is red",
+                "lamp is silver",
+                "sink is white",
+                "chair is brown",
+                "telephone is black"
+            ]
+        },
+        {
+            "rt": 673.0950002092868,
+            "stimulus": "<img src = \"img/5.png\" width=\"200\" height=\"200\">",
+            "key_press": 68,
             "correct_response_data": 83,
             "trial_type": "html-keyboard-response",
             "trial_index": 30,
-            "time_elapsed": 67178,
+            "time_elapsed": 58493,
             "internal_node_id": "0.0-7.0-23.0",
-            "subject": "3pf319kerphx6nd",
-            "condition": "conditionA"
+            "subject": "ccvzockf8fjejvz",
+            "condition": "conditionA",
+            "firstlet_origin": [
+                "C",
+                "B",
+                "W",
+                "T",
+                "P",
+                "D"
+            ],
+            "secondlet_origin": [
+                "C or R",
+                "B or S",
+                "W or F",
+                "T or E",
+                "P or A",
+                "D or L"
+            ],
+            "subword_origin": [
+                "chair<br>computer<br>curtain",
+                "book<br>bouquet<br>bed",
+                "window<br>wardrobe<br>wine rack",
+                "table<br>towel<br>toilet",
+                "painting<br>plant<br>printer",
+                "display case<br>dresser<br>desk"
+            ],
+            "cueword_origin": [
+                "a table",
+                "a rug",
+                "a lamp",
+                "a sink",
+                "a chair",
+                "a telephone"
+            ],
+            "controlword_origin": [
+                "table is brown",
+                "rug is red",
+                "lamp is silver",
+                "sink is white",
+                "chair is brown",
+                "telephone is black"
+            ]
         },
         {
             "rt": null,
-            "stimulus": "<p> Correct </p>",
+            "stimulus": "<p> Incorrect </p>",
             "button_pressed": null,
             "trial_type": "html-button-response",
             "trial_index": 31,
-            "time_elapsed": 69179,
+            "time_elapsed": 60499,
             "internal_node_id": "0.0-7.0-24.0",
-            "subject": "3pf319kerphx6nd",
-            "condition": "conditionA"
+            "subject": "ccvzockf8fjejvz",
+            "condition": "conditionA",
+            "firstlet_origin": [
+                "C",
+                "B",
+                "W",
+                "T",
+                "P",
+                "D"
+            ],
+            "secondlet_origin": [
+                "C or R",
+                "B or S",
+                "W or F",
+                "T or E",
+                "P or A",
+                "D or L"
+            ],
+            "subword_origin": [
+                "chair<br>computer<br>curtain",
+                "book<br>bouquet<br>bed",
+                "window<br>wardrobe<br>wine rack",
+                "table<br>towel<br>toilet",
+                "painting<br>plant<br>printer",
+                "display case<br>dresser<br>desk"
+            ],
+            "cueword_origin": [
+                "a table",
+                "a rug",
+                "a lamp",
+                "a sink",
+                "a chair",
+                "a telephone"
+            ],
+            "controlword_origin": [
+                "table is brown",
+                "rug is red",
+                "lamp is silver",
+                "sink is white",
+                "chair is brown",
+                "telephone is black"
+            ]
         },
         {
-            "rt": 509.82500007376075,
-            "stimulus": "<img src = \"img/4.png\" width=\"200\" height=\"200\">",
-            "key_press": 83,
+            "rt": 292.41999983787537,
+            "stimulus": "<img src = \"img/3.png\" width=\"200\" height=\"200\">",
+            "key_press": 68,
             "correct_response_data": 83,
             "trial_type": "html-keyboard-response",
             "trial_index": 32,
-            "time_elapsed": 69690,
+            "time_elapsed": 60793,
             "internal_node_id": "0.0-7.0-25.0",
-            "subject": "3pf319kerphx6nd",
-            "condition": "conditionA"
+            "subject": "ccvzockf8fjejvz",
+            "condition": "conditionA",
+            "firstlet_origin": [
+                "C",
+                "B",
+                "W",
+                "T",
+                "P",
+                "D"
+            ],
+            "secondlet_origin": [
+                "C or R",
+                "B or S",
+                "W or F",
+                "T or E",
+                "P or A",
+                "D or L"
+            ],
+            "subword_origin": [
+                "chair<br>computer<br>curtain",
+                "book<br>bouquet<br>bed",
+                "window<br>wardrobe<br>wine rack",
+                "table<br>towel<br>toilet",
+                "painting<br>plant<br>printer",
+                "display case<br>dresser<br>desk"
+            ],
+            "cueword_origin": [
+                "a table",
+                "a rug",
+                "a lamp",
+                "a sink",
+                "a chair",
+                "a telephone"
+            ],
+            "controlword_origin": [
+                "table is brown",
+                "rug is red",
+                "lamp is silver",
+                "sink is white",
+                "chair is brown",
+                "telephone is black"
+            ]
         },
         {
             "rt": null,
-            "stimulus": "<p> Correct </p>",
+            "stimulus": "<p> Incorrect </p>",
             "button_pressed": null,
             "trial_type": "html-button-response",
             "trial_index": 33,
-            "time_elapsed": 71692,
+            "time_elapsed": 62796,
             "internal_node_id": "0.0-7.0-26.0",
-            "subject": "3pf319kerphx6nd",
-            "condition": "conditionA"
+            "subject": "ccvzockf8fjejvz",
+            "condition": "conditionA",
+            "firstlet_origin": [
+                "C",
+                "B",
+                "W",
+                "T",
+                "P",
+                "D"
+            ],
+            "secondlet_origin": [
+                "C or R",
+                "B or S",
+                "W or F",
+                "T or E",
+                "P or A",
+                "D or L"
+            ],
+            "subword_origin": [
+                "chair<br>computer<br>curtain",
+                "book<br>bouquet<br>bed",
+                "window<br>wardrobe<br>wine rack",
+                "table<br>towel<br>toilet",
+                "painting<br>plant<br>printer",
+                "display case<br>dresser<br>desk"
+            ],
+            "cueword_origin": [
+                "a table",
+                "a rug",
+                "a lamp",
+                "a sink",
+                "a chair",
+                "a telephone"
+            ],
+            "controlword_origin": [
+                "table is brown",
+                "rug is red",
+                "lamp is silver",
+                "sink is white",
+                "chair is brown",
+                "telephone is black"
+            ]
         },
         {
-            "view_history": "[{\"page_index\":0,\"viewing_time\":946.7899999581277}]",
-            "rt": 947.029999922961,
+            "view_history": "[{\"page_index\":0,\"viewing_time\":1204.219999955967}]",
+            "rt": 1204.4150000438094,
             "trial_type": "instructions",
             "trial_index": 34,
-            "time_elapsed": 72640,
+            "time_elapsed": 64001,
             "internal_node_id": "0.0-7.0-27.0",
-            "subject": "3pf319kerphx6nd",
-            "condition": "conditionA"
+            "subject": "ccvzockf8fjejvz",
+            "condition": "conditionA",
+            "firstlet_origin": [
+                "C",
+                "B",
+                "W",
+                "T",
+                "P",
+                "D"
+            ],
+            "secondlet_origin": [
+                "C or R",
+                "B or S",
+                "W or F",
+                "T or E",
+                "P or A",
+                "D or L"
+            ],
+            "subword_origin": [
+                "chair<br>computer<br>curtain",
+                "book<br>bouquet<br>bed",
+                "window<br>wardrobe<br>wine rack",
+                "table<br>towel<br>toilet",
+                "painting<br>plant<br>printer",
+                "display case<br>dresser<br>desk"
+            ],
+            "cueword_origin": [
+                "a table",
+                "a rug",
+                "a lamp",
+                "a sink",
+                "a chair",
+                "a telephone"
+            ],
+            "controlword_origin": [
+                "table is brown",
+                "rug is red",
+                "lamp is silver",
+                "sink is white",
+                "chair is brown",
+                "telephone is black"
+            ]
         },
         {
             "rt": null,
@@ -423,47 +1823,207 @@
             "button_pressed": null,
             "trial_type": "html-button-response",
             "trial_index": 35,
-            "time_elapsed": 76141,
+            "time_elapsed": 67504,
             "internal_node_id": "0.0-7.0-28.0",
-            "subject": "3pf319kerphx6nd",
-            "condition": "conditionA"
+            "subject": "ccvzockf8fjejvz",
+            "condition": "conditionA",
+            "firstlet_origin": [
+                "C",
+                "B",
+                "W",
+                "T",
+                "P",
+                "D"
+            ],
+            "secondlet_origin": [
+                "C or R",
+                "B or S",
+                "W or F",
+                "T or E",
+                "P or A",
+                "D or L"
+            ],
+            "subword_origin": [
+                "chair<br>computer<br>curtain",
+                "book<br>bouquet<br>bed",
+                "window<br>wardrobe<br>wine rack",
+                "table<br>towel<br>toilet",
+                "painting<br>plant<br>printer",
+                "display case<br>dresser<br>desk"
+            ],
+            "cueword_origin": [
+                "a table",
+                "a rug",
+                "a lamp",
+                "a sink",
+                "a chair",
+                "a telephone"
+            ],
+            "controlword_origin": [
+                "table is brown",
+                "rug is red",
+                "lamp is silver",
+                "sink is white",
+                "chair is brown",
+                "telephone is black"
+            ]
         },
         {
-            "rt": 1341.5650001261383,
-            "response": "86",
+            "rt": 1796.0800000000745,
+            "response": "87",
             "stimulus": "<div><span id=\"time6\">00:59</span></div><p>I see <b>a lamp</b> in this photo of a scene.</p><p>What is the probability that I also see: <br> any other object starting with W or F<p>Your answer is <span id=\"answer-display\"></span></p>",
             "cueword": "a lamp",
             "secondlet": "W or F",
             "trial_type": "html-slider-response",
             "trial_index": 36,
-            "time_elapsed": 77484,
+            "time_elapsed": 69302,
             "internal_node_id": "0.0-7.0-29.0",
-            "subject": "3pf319kerphx6nd",
-            "condition": "conditionA"
+            "subject": "ccvzockf8fjejvz",
+            "condition": "conditionA",
+            "firstlet_origin": [
+                "C",
+                "B",
+                "W",
+                "T",
+                "P",
+                "D"
+            ],
+            "secondlet_origin": [
+                "C or R",
+                "B or S",
+                "W or F",
+                "T or E",
+                "P or A",
+                "D or L"
+            ],
+            "subword_origin": [
+                "chair<br>computer<br>curtain",
+                "book<br>bouquet<br>bed",
+                "window<br>wardrobe<br>wine rack",
+                "table<br>towel<br>toilet",
+                "painting<br>plant<br>printer",
+                "display case<br>dresser<br>desk"
+            ],
+            "cueword_origin": [
+                "a table",
+                "a rug",
+                "a lamp",
+                "a sink",
+                "a chair",
+                "a telephone"
+            ],
+            "controlword_origin": [
+                "table is brown",
+                "rug is red",
+                "lamp is silver",
+                "sink is white",
+                "chair is brown",
+                "telephone is black"
+            ]
         },
         {
             "rt": null,
-            "stimulus": "<p>I see <b>a table</b> in this photo of a scene.</p><br>",
+            "stimulus": "<p>I see <b>a sink</b> in this photo of a scene.</p><br>",
             "button_pressed": null,
             "trial_type": "html-button-response",
             "trial_index": 37,
-            "time_elapsed": 80985,
+            "time_elapsed": 72803,
             "internal_node_id": "0.0-7.0-30.0",
-            "subject": "3pf319kerphx6nd",
-            "condition": "conditionA"
+            "subject": "ccvzockf8fjejvz",
+            "condition": "conditionA",
+            "firstlet_origin": [
+                "C",
+                "B",
+                "W",
+                "T",
+                "P",
+                "D"
+            ],
+            "secondlet_origin": [
+                "C or R",
+                "B or S",
+                "W or F",
+                "T or E",
+                "P or A",
+                "D or L"
+            ],
+            "subword_origin": [
+                "chair<br>computer<br>curtain",
+                "book<br>bouquet<br>bed",
+                "window<br>wardrobe<br>wine rack",
+                "table<br>towel<br>toilet",
+                "painting<br>plant<br>printer",
+                "display case<br>dresser<br>desk"
+            ],
+            "cueword_origin": [
+                "a table",
+                "a rug",
+                "a lamp",
+                "a sink",
+                "a chair",
+                "a telephone"
+            ],
+            "controlword_origin": [
+                "table is brown",
+                "rug is red",
+                "lamp is silver",
+                "sink is white",
+                "chair is brown",
+                "telephone is black"
+            ]
         },
         {
-            "rt": 1463.9600000809878,
-            "response": "14",
-            "stimulus": "<div><span id=\"time7\">00:59</span></div><p>I see <b>a table</b> in this photo of a scene.</p><p>What is the probability that I also see: <br> any other object starting with C or R<p>Your answer is <span id=\"answer-display\"></span></p>",
-            "cueword": "a table",
-            "secondlet": "C or R",
+            "rt": 1487.4200001358986,
+            "response": "17",
+            "stimulus": "<div><span id=\"time7\">00:59</span></div><p>I see <b>a sink</b> in this photo of a scene.</p><p>What is the probability that I also see: <br> any other object starting with T or E<p>Your answer is <span id=\"answer-display\"></span></p>",
+            "cueword": "a sink",
+            "secondlet": "T or E",
             "trial_type": "html-slider-response",
             "trial_index": 38,
-            "time_elapsed": 82450,
+            "time_elapsed": 74292,
             "internal_node_id": "0.0-7.0-31.0",
-            "subject": "3pf319kerphx6nd",
-            "condition": "conditionA"
+            "subject": "ccvzockf8fjejvz",
+            "condition": "conditionA",
+            "firstlet_origin": [
+                "C",
+                "B",
+                "W",
+                "T",
+                "P",
+                "D"
+            ],
+            "secondlet_origin": [
+                "C or R",
+                "B or S",
+                "W or F",
+                "T or E",
+                "P or A",
+                "D or L"
+            ],
+            "subword_origin": [
+                "chair<br>computer<br>curtain",
+                "book<br>bouquet<br>bed",
+                "window<br>wardrobe<br>wine rack",
+                "table<br>towel<br>toilet",
+                "painting<br>plant<br>printer",
+                "display case<br>dresser<br>desk"
+            ],
+            "cueword_origin": [
+                "a table",
+                "a rug",
+                "a lamp",
+                "a sink",
+                "a chair",
+                "a telephone"
+            ],
+            "controlword_origin": [
+                "table is brown",
+                "rug is red",
+                "lamp is silver",
+                "sink is white",
+                "chair is brown",
+                "telephone is black"
+            ]
         },
         {
             "rt": null,
@@ -471,47 +2031,207 @@
             "button_pressed": null,
             "trial_type": "html-button-response",
             "trial_index": 39,
-            "time_elapsed": 85961,
+            "time_elapsed": 77796,
             "internal_node_id": "0.0-7.0-32.0",
-            "subject": "3pf319kerphx6nd",
-            "condition": "conditionA"
+            "subject": "ccvzockf8fjejvz",
+            "condition": "conditionA",
+            "firstlet_origin": [
+                "C",
+                "B",
+                "W",
+                "T",
+                "P",
+                "D"
+            ],
+            "secondlet_origin": [
+                "C or R",
+                "B or S",
+                "W or F",
+                "T or E",
+                "P or A",
+                "D or L"
+            ],
+            "subword_origin": [
+                "chair<br>computer<br>curtain",
+                "book<br>bouquet<br>bed",
+                "window<br>wardrobe<br>wine rack",
+                "table<br>towel<br>toilet",
+                "painting<br>plant<br>printer",
+                "display case<br>dresser<br>desk"
+            ],
+            "cueword_origin": [
+                "a table",
+                "a rug",
+                "a lamp",
+                "a sink",
+                "a chair",
+                "a telephone"
+            ],
+            "controlword_origin": [
+                "table is brown",
+                "rug is red",
+                "lamp is silver",
+                "sink is white",
+                "chair is brown",
+                "telephone is black"
+            ]
         },
         {
-            "rt": 1269.6650000289083,
-            "response": "89",
+            "rt": 2192.155000055209,
+            "response": "96",
             "stimulus": "<div><span id=\"time8\">00:59</span></div><p>I see <b>a rug</b> in this photo of a scene.</p><p>What is the probability that I also see: <br> any other object starting with B or S<p>Your answer is <span id=\"answer-display\"></span></p>",
             "cueword": "a rug",
             "secondlet": "B or S",
             "trial_type": "html-slider-response",
             "trial_index": 40,
-            "time_elapsed": 87232,
+            "time_elapsed": 79989,
             "internal_node_id": "0.0-7.0-33.0",
-            "subject": "3pf319kerphx6nd",
-            "condition": "conditionA"
+            "subject": "ccvzockf8fjejvz",
+            "condition": "conditionA",
+            "firstlet_origin": [
+                "C",
+                "B",
+                "W",
+                "T",
+                "P",
+                "D"
+            ],
+            "secondlet_origin": [
+                "C or R",
+                "B or S",
+                "W or F",
+                "T or E",
+                "P or A",
+                "D or L"
+            ],
+            "subword_origin": [
+                "chair<br>computer<br>curtain",
+                "book<br>bouquet<br>bed",
+                "window<br>wardrobe<br>wine rack",
+                "table<br>towel<br>toilet",
+                "painting<br>plant<br>printer",
+                "display case<br>dresser<br>desk"
+            ],
+            "cueword_origin": [
+                "a table",
+                "a rug",
+                "a lamp",
+                "a sink",
+                "a chair",
+                "a telephone"
+            ],
+            "controlword_origin": [
+                "table is brown",
+                "rug is red",
+                "lamp is silver",
+                "sink is white",
+                "chair is brown",
+                "telephone is black"
+            ]
         },
         {
             "rt": null,
-            "stimulus": "<p>I see <b>a sink</b> in this photo of a scene.</p><br>",
+            "stimulus": "<p>I see <b>a chair</b> in this photo of a scene.</p><br>",
             "button_pressed": null,
             "trial_type": "html-button-response",
             "trial_index": 41,
-            "time_elapsed": 90733,
+            "time_elapsed": 83491,
             "internal_node_id": "0.0-7.0-34.0",
-            "subject": "3pf319kerphx6nd",
-            "condition": "conditionA"
+            "subject": "ccvzockf8fjejvz",
+            "condition": "conditionA",
+            "firstlet_origin": [
+                "C",
+                "B",
+                "W",
+                "T",
+                "P",
+                "D"
+            ],
+            "secondlet_origin": [
+                "C or R",
+                "B or S",
+                "W or F",
+                "T or E",
+                "P or A",
+                "D or L"
+            ],
+            "subword_origin": [
+                "chair<br>computer<br>curtain",
+                "book<br>bouquet<br>bed",
+                "window<br>wardrobe<br>wine rack",
+                "table<br>towel<br>toilet",
+                "painting<br>plant<br>printer",
+                "display case<br>dresser<br>desk"
+            ],
+            "cueword_origin": [
+                "a table",
+                "a rug",
+                "a lamp",
+                "a sink",
+                "a chair",
+                "a telephone"
+            ],
+            "controlword_origin": [
+                "table is brown",
+                "rug is red",
+                "lamp is silver",
+                "sink is white",
+                "chair is brown",
+                "telephone is black"
+            ]
         },
         {
-            "rt": 1358.059999998659,
-            "response": "7",
-            "stimulus": "<div><span id=\"time9\">00:59</span></div><p>I see <b>a sink</b> in this photo of a scene.</p><p>What is the probability that I also see: <br> any other object starting with T or E<p>Your answer is <span id=\"answer-display\"></span></p>",
-            "cueword": "a sink",
-            "secondlet": "T or E",
+            "rt": 1838.0899999756366,
+            "response": "9",
+            "stimulus": "<div><span id=\"time9\">00:59</span></div><p>I see <b>a chair</b> in this photo of a scene.</p><p>What is the probability that I also see: <br> any other object starting with P or A<p>Your answer is <span id=\"answer-display\"></span></p>",
+            "cueword": "a chair",
+            "secondlet": "P or A",
             "trial_type": "html-slider-response",
             "trial_index": 42,
-            "time_elapsed": 92092,
+            "time_elapsed": 85330,
             "internal_node_id": "0.0-7.0-35.0",
-            "subject": "3pf319kerphx6nd",
-            "condition": "conditionA"
+            "subject": "ccvzockf8fjejvz",
+            "condition": "conditionA",
+            "firstlet_origin": [
+                "C",
+                "B",
+                "W",
+                "T",
+                "P",
+                "D"
+            ],
+            "secondlet_origin": [
+                "C or R",
+                "B or S",
+                "W or F",
+                "T or E",
+                "P or A",
+                "D or L"
+            ],
+            "subword_origin": [
+                "chair<br>computer<br>curtain",
+                "book<br>bouquet<br>bed",
+                "window<br>wardrobe<br>wine rack",
+                "table<br>towel<br>toilet",
+                "painting<br>plant<br>printer",
+                "display case<br>dresser<br>desk"
+            ],
+            "cueword_origin": [
+                "a table",
+                "a rug",
+                "a lamp",
+                "a sink",
+                "a chair",
+                "a telephone"
+            ],
+            "controlword_origin": [
+                "table is brown",
+                "rug is red",
+                "lamp is silver",
+                "sink is white",
+                "chair is brown",
+                "telephone is black"
+            ]
         },
         {
             "rt": null,
@@ -519,57 +2239,257 @@
             "button_pressed": null,
             "trial_type": "html-button-response",
             "trial_index": 43,
-            "time_elapsed": 95596,
+            "time_elapsed": 88832,
             "internal_node_id": "0.0-7.0-36.0",
-            "subject": "3pf319kerphx6nd",
-            "condition": "conditionA"
+            "subject": "ccvzockf8fjejvz",
+            "condition": "conditionA",
+            "firstlet_origin": [
+                "C",
+                "B",
+                "W",
+                "T",
+                "P",
+                "D"
+            ],
+            "secondlet_origin": [
+                "C or R",
+                "B or S",
+                "W or F",
+                "T or E",
+                "P or A",
+                "D or L"
+            ],
+            "subword_origin": [
+                "chair<br>computer<br>curtain",
+                "book<br>bouquet<br>bed",
+                "window<br>wardrobe<br>wine rack",
+                "table<br>towel<br>toilet",
+                "painting<br>plant<br>printer",
+                "display case<br>dresser<br>desk"
+            ],
+            "cueword_origin": [
+                "a table",
+                "a rug",
+                "a lamp",
+                "a sink",
+                "a chair",
+                "a telephone"
+            ],
+            "controlword_origin": [
+                "table is brown",
+                "rug is red",
+                "lamp is silver",
+                "sink is white",
+                "chair is brown",
+                "telephone is black"
+            ]
         },
         {
-            "rt": 1405.6649999693036,
-            "response": "89",
+            "rt": 1124.525000108406,
+            "response": "93",
             "stimulus": "<div><span id=\"time10\">00:59</span></div><p>I see <b>a telephone</b> in this photo of a scene.</p><p>What is the probability that I also see: <br> any other object starting with D or L<p>Your answer is <span id=\"answer-display\"></span></p>",
             "cueword": "a telephone",
             "secondlet": "D or L",
             "trial_type": "html-slider-response",
             "trial_index": 44,
-            "time_elapsed": 97003,
+            "time_elapsed": 89958,
             "internal_node_id": "0.0-7.0-37.0",
-            "subject": "3pf319kerphx6nd",
-            "condition": "conditionA"
+            "subject": "ccvzockf8fjejvz",
+            "condition": "conditionA",
+            "firstlet_origin": [
+                "C",
+                "B",
+                "W",
+                "T",
+                "P",
+                "D"
+            ],
+            "secondlet_origin": [
+                "C or R",
+                "B or S",
+                "W or F",
+                "T or E",
+                "P or A",
+                "D or L"
+            ],
+            "subword_origin": [
+                "chair<br>computer<br>curtain",
+                "book<br>bouquet<br>bed",
+                "window<br>wardrobe<br>wine rack",
+                "table<br>towel<br>toilet",
+                "painting<br>plant<br>printer",
+                "display case<br>dresser<br>desk"
+            ],
+            "cueword_origin": [
+                "a table",
+                "a rug",
+                "a lamp",
+                "a sink",
+                "a chair",
+                "a telephone"
+            ],
+            "controlword_origin": [
+                "table is brown",
+                "rug is red",
+                "lamp is silver",
+                "sink is white",
+                "chair is brown",
+                "telephone is black"
+            ]
         },
         {
             "rt": null,
-            "stimulus": "<p>I see <b>a chair</b> in this photo of a scene.</p><br>",
+            "stimulus": "<p>I see <b>a table</b> in this photo of a scene.</p><br>",
             "button_pressed": null,
             "trial_type": "html-button-response",
             "trial_index": 45,
-            "time_elapsed": 100504,
+            "time_elapsed": 93462,
             "internal_node_id": "0.0-7.0-38.0",
-            "subject": "3pf319kerphx6nd",
-            "condition": "conditionA"
+            "subject": "ccvzockf8fjejvz",
+            "condition": "conditionA",
+            "firstlet_origin": [
+                "C",
+                "B",
+                "W",
+                "T",
+                "P",
+                "D"
+            ],
+            "secondlet_origin": [
+                "C or R",
+                "B or S",
+                "W or F",
+                "T or E",
+                "P or A",
+                "D or L"
+            ],
+            "subword_origin": [
+                "chair<br>computer<br>curtain",
+                "book<br>bouquet<br>bed",
+                "window<br>wardrobe<br>wine rack",
+                "table<br>towel<br>toilet",
+                "painting<br>plant<br>printer",
+                "display case<br>dresser<br>desk"
+            ],
+            "cueword_origin": [
+                "a table",
+                "a rug",
+                "a lamp",
+                "a sink",
+                "a chair",
+                "a telephone"
+            ],
+            "controlword_origin": [
+                "table is brown",
+                "rug is red",
+                "lamp is silver",
+                "sink is white",
+                "chair is brown",
+                "telephone is black"
+            ]
         },
         {
-            "rt": 1043.7950000632554,
-            "response": "8",
-            "stimulus": "<div><span id=\"time11\">00:59</span></div><p>I see <b>a chair</b> in this photo of a scene.</p><p>What is the probability that I also see: <br> any other object starting with P or A<p>Your answer is <span id=\"answer-display\"></span></p>",
-            "cueword": "a chair",
-            "secondlet": "P or A",
+            "rt": 1334.660000167787,
+            "response": "7",
+            "stimulus": "<div><span id=\"time11\">00:59</span></div><p>I see <b>a table</b> in this photo of a scene.</p><p>What is the probability that I also see: <br> any other object starting with C or R<p>Your answer is <span id=\"answer-display\"></span></p>",
+            "cueword": "a table",
+            "secondlet": "C or R",
             "trial_type": "html-slider-response",
             "trial_index": 46,
-            "time_elapsed": 101549,
+            "time_elapsed": 94798,
             "internal_node_id": "0.0-7.0-39.0",
-            "subject": "3pf319kerphx6nd",
-            "condition": "conditionA"
+            "subject": "ccvzockf8fjejvz",
+            "condition": "conditionA",
+            "firstlet_origin": [
+                "C",
+                "B",
+                "W",
+                "T",
+                "P",
+                "D"
+            ],
+            "secondlet_origin": [
+                "C or R",
+                "B or S",
+                "W or F",
+                "T or E",
+                "P or A",
+                "D or L"
+            ],
+            "subword_origin": [
+                "chair<br>computer<br>curtain",
+                "book<br>bouquet<br>bed",
+                "window<br>wardrobe<br>wine rack",
+                "table<br>towel<br>toilet",
+                "painting<br>plant<br>printer",
+                "display case<br>dresser<br>desk"
+            ],
+            "cueword_origin": [
+                "a table",
+                "a rug",
+                "a lamp",
+                "a sink",
+                "a chair",
+                "a telephone"
+            ],
+            "controlword_origin": [
+                "table is brown",
+                "rug is red",
+                "lamp is silver",
+                "sink is white",
+                "chair is brown",
+                "telephone is black"
+            ]
         },
         {
-            "rt": 4665.949999820441,
+            "rt": 3982.8000001143664,
             "responses": "{\"Q0\":\"test\"}",
             "trial_type": "survey-text",
             "trial_index": 47,
-            "time_elapsed": 106217,
+            "time_elapsed": 98783,
             "internal_node_id": "0.0-8.0",
-            "subject": "3pf319kerphx6nd",
-            "condition": "conditionA"
+            "subject": "ccvzockf8fjejvz",
+            "condition": "conditionA",
+            "firstlet_origin": [
+                "C",
+                "B",
+                "W",
+                "T",
+                "P",
+                "D"
+            ],
+            "secondlet_origin": [
+                "C or R",
+                "B or S",
+                "W or F",
+                "T or E",
+                "P or A",
+                "D or L"
+            ],
+            "subword_origin": [
+                "chair<br>computer<br>curtain",
+                "book<br>bouquet<br>bed",
+                "window<br>wardrobe<br>wine rack",
+                "table<br>towel<br>toilet",
+                "painting<br>plant<br>printer",
+                "display case<br>dresser<br>desk"
+            ],
+            "cueword_origin": [
+                "a table",
+                "a rug",
+                "a lamp",
+                "a sink",
+                "a chair",
+                "a telephone"
+            ],
+            "controlword_origin": [
+                "table is brown",
+                "rug is red",
+                "lamp is silver",
+                "sink is white",
+                "chair is brown",
+                "telephone is black"
+            ]
         }
     ],
     "__v": 0
