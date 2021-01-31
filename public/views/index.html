@@ -197,6 +197,7 @@
     //starting letter
     var firstlet = ['B','T','C','W','P','D'];
     var secondlet = ['B or S','T or E','C or R','W or F','P or A','D or L'];
+    var secondlet_dif = ['B or E','T or S','C or F','W or R','P or L','D or A'];
 
     //pointes for sub-additive condition
     var subword = ['bird<br>buffalo<br>bicycle', 
@@ -313,10 +314,12 @@
     
     console.log(condition_assignment)
 
+
+    // Initial Experiment Check
     if (condition_assignment == 'conditionA') {
-      
       for (var i = 0; i < 6; i++) {
-        
+  
+        // QUESTION ONE
         experiment_trials.push({
         type: 'html-button-response',
         stimulus: '<p>I see <b>' + cueword[i] + '</b> in this photo of a scene.</p><br>',
@@ -350,8 +353,132 @@
                 '<p>What is the probability that I also see:<br> any object starting with ' + firstlet[i] + '</p><br>' +
                 '<p>Your answer is <span id="answer-display"></span></p>'
         });
-      }
 
+        // QUESTION TWO
+        var index = shuffled[i]
+
+        console.log(index)
+
+        experiment_trials.push({
+          type: 'html-button-response',
+          stimulus: '<p>I see <b>' + cueword[index] + '</b> in this photo of a scene.</p><br>',
+          trial_duration: 3500, // was 5000
+          choices: [],
+          response_ends_trial: false,
+          prompt: ""
+        });
+                
+        experiment_trials.push({
+        type: 'html-slider-response',
+        trial_duration: 20000,
+        slider_start: 1,
+        data: {
+          cueword: cueword[index],
+          secondlet: secondlet[index]
+        },
+        on_load: function () {
+                var timerString = '#time' + timerCounter++;
+                var timerLength = 20,
+                display = document.querySelector(timerString);
+                console.log(timerString)
+                startTimer(timerLength, display, timerString);
+
+                var input = document.querySelector('#jspsych-html-slider-response-response')
+                input.addEventListener('input', function() {
+                  document.querySelector('#answer-display').innerText = input.valueAsNumber.toString() + '%'
+                })
+            },
+        stimulus: '<div><span id="time' + (i+6) + '">00:19</span></div><p>I see <b>' + cueword[index] + '</b> in this photo of a scene.</p>' +
+                '<p>What is the probability that I also see: <br> any other object '+
+                'starting with ' + secondlet[index] + 
+                '<p>Your answer is <span id="answer-display"></span></p>'
+        });
+
+      }
+    } else {
+
+        // QUESTION ONE
+        experiment_trials.push({
+        type: 'html-button-response',
+        stimulus: '<p>I see <b>' + cueword[i] + '</b> in this photo of a scene.</p><br>',
+        trial_duration: 3500, // was 5000
+        choices: [],
+        response_ends_trial: false,
+        prompt: ""
+        });
+
+        experiment_trials.push({
+        type: 'html-slider-response',
+        trial_duration: 20000,
+        slider_start: 1,
+        data: {
+          cueword: cueword[i],
+          subword: subword[i],
+          firstlet: firstlet[i]
+        },
+        on_load: function () {
+                var timerString = '#time' + timerCounter++;
+                var timerLength = 20,
+                display = document.querySelector(timerString);
+                console.log(timerString)
+                startTimer(timerLength, display, timerString);
+
+                var input = document.querySelector('#jspsych-html-slider-response-response')
+                input.addEventListener('input', function() {
+                  document.querySelector('#answer-display').innerText = input.valueAsNumber.toString() + '%'
+                })
+            },
+        stimulus: '<div><span id="time' + i + '">00:19</span></div><p>I see <b>' + cueword[i] + '</b> in this photo of a scene.</p>' +
+                '<p>What is the probability that I also see: <br>'+ subword[i] +'<br>or any other object starting with ' + firstlet[i] + '</p><br>' +
+                '<p>Your answer is <span id="answer-display"></span></p>'
+        });
+
+        // QUESTION TWO
+        var index = shuffled[i]
+
+        console.log(index)
+
+        experiment_trials.push({
+          type: 'html-button-response',
+          stimulus: '<p>I see <b>' + cueword[index] + '</b> in this photo of a scene.</p><br>',
+          trial_duration: 3500, // was 5000
+          choices: [],
+          response_ends_trial: false,
+          prompt: ""
+        });
+                
+        experiment_trials.push({
+        type: 'html-slider-response',
+        trial_duration: 20000,
+        slider_start: 1,
+        data: {
+          cueword: cueword[index],
+          secondlet: secondlet[index]
+        },
+        on_load: function () {
+                var timerString = '#time' + timerCounter++;
+                var timerLength = 20,
+                display = document.querySelector(timerString);
+                console.log(timerString)
+                startTimer(timerLength, display, timerString);
+
+                var input = document.querySelector('#jspsych-html-slider-response-response')
+                input.addEventListener('input', function() {
+                  document.querySelector('#answer-display').innerText = input.valueAsNumber.toString() + '%'
+                })
+            },
+        stimulus: '<div><span id="time' + (i+6) + '">00:19</span></div><p>I see <b>' + cueword[index] + '</b> in this photo of a scene.</p>' +
+                '<p>What is the probability that I also see: <br> any other object '+
+                'starting with ' + secondlet[index] + 
+                '<p>Your answer is <span id="answer-display"></span></p>'
+        });
+
+    }
+
+
+    // Q1
+    if (condition_assignment == 'conditionA') {
+      
       for (var i = 0; i < 6; i++) {
         
         experiment_trials.push({
@@ -429,44 +556,9 @@
         });
       }
 
-      for (var i = 0; i < 6; i++) {
-        
-        experiment_trials.push({
-        type: 'html-button-response',
-        stimulus: '<p>I see <b>' + cueword[i] + '</b> in this photo of a scene.</p><br>',
-        trial_duration: 3500, // was 5000
-        choices: [],
-        response_ends_trial: false,
-        prompt: ""
-        });
-
-        experiment_trials.push({
-        type: 'html-slider-response',
-        trial_duration: 20000,
-        slider_start: 1,
-        data: {
-          cueword: cueword[i],
-          subword: subword[i],
-          firstlet: firstlet[i]
-        },
-        on_load: function () {
-                var timerString = '#time' + timerCounter++;
-                var timerLength = 20,
-                display = document.querySelector(timerString);
-                console.log(timerString)
-                startTimer(timerLength, display, timerString);
-
-                var input = document.querySelector('#jspsych-html-slider-response-response')
-                input.addEventListener('input', function() {
-                  document.querySelector('#answer-display').innerText = input.valueAsNumber.toString() + '%'
-                })
-            },
-        stimulus: '<div><span id="time' + i + '">00:19</span></div><p>I see <b>' + cueword[i] + '</b> in this photo of a scene.</p>' +
-                '<p>What is the probability that I also see: <br>'+ subword[i] +'<br>or any other object starting with ' + firstlet[i] + '</p><br>' +
-                '<p>Your answer is <span id="answer-display"></span></p>'
-        });
-      }
     }
+
+    // Memory Task
 
     experiment_trials.push({
     type: 'instructions',
@@ -538,6 +630,8 @@
     show_clickable_nav: true
     });
 
+    // Q2
+
     for (var i = 0; i < 6; i++) {
         var index = shuffled[i]
 
@@ -574,7 +668,7 @@
             },
         stimulus: '<div><span id="time' + (i+6) + '">00:19</span></div><p>I see <b>' + cueword[index] + '</b> in this photo of a scene.</p>' +
                 '<p>What is the probability that I also see: <br> any other object '+
-                'starting with ' + secondlet[index] + 
+                'starting with ' + secondlet_dif[index] + 
                 '<p>Your answer is <span id="answer-display"></span></p>'
         });
     }
